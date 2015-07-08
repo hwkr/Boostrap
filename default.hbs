@@ -15,6 +15,7 @@
 
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
     {{! insert font link here
     	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
@@ -28,24 +29,22 @@
 	{{! Everything else gets inserted here }}
   <div class="container">
 	  {{{body}}}
-
-    <div class="row">
-      <div class="col-lg-12">
-      	<footer class="site-footer">
-          <div class="row">
-            <div class="col-lg-12">
-            	<a href="{{@blog.url}}/rss/"><span class="glyphicon glyphicon-plane"></span> Subscribe</a>
-            	<div class="text-muted">
-              	<section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013 &bull; All rights reserved.</section>
-                <section class="poweredby">Proudly published with <a href="http://ghost.org">Ghost</a></section>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </div>
   </div>
 
+      
+  <footer class="site-footer">
+    <div class="container">
+      <div class="col-sm-10">
+        <div class="text-muted">
+          <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2015 &bull; All rights reserved.</section>
+        </div>
+      </div>
+      <div class="col-sm-2 text-right">
+        <a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a>
+      </div>
+    </div>
+  </footer>
+    
   {{! Ghost outputs important scripts and data with this tag }}
   {{ghost_foot}}
 
