@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+    .navbar-fixed-top {
+        position: relative;
+        top: auto;
+    }
+    .navbar-collapse {
+        max-height: none;
+    }
+    body {
+        margin: 0;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-collapse {
+        max-height: 70px;
+    }
+    body {
+        margin-top: 70px;
+    }
+}
