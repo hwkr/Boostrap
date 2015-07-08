@@ -1,4 +1,23 @@
 {
   "name": "Boostrap",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bitHero/boostrap.git"
+  },
+  "bugs": "https://github.com/bitHero/boostrap/issues",
+  "contributors": "https://github.com/bitHero/boostrap/graphs/contributors",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/bitHero/boostrap/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "sass-watch": "sass --watch assets/sass/boostrap.scss:assets/css/boostrap.min.css --style compressed",
+    "sass-production": "sass assets/sass/boostrap.scss assets/css/boostrap.min.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^0.5.0"
+  }
 }
