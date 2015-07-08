@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: $screen-sm-min) {
     .navbar-fixed-top {
         position: relative;
         top: auto;
@@ -7,14 +7,11 @@
         max-height: none;
     }
     body {
-        margin: 0;
+        margin-top: 0;
     }
 }
-@media (max-width: 767px) {
-    .navbar-collapse {
-        max-height: 70px;
-    }
+@media (max-width: $screen-xs-max) {
     body {
-        margin-top: 70px;
+        margin-top: $navbar-height + $navbar-margin-bottom;
     }
 }

@@ -1,22 +1,28 @@
-@import url(normalize.css);
+/*!
+ * Boostrap v0.1.0
+ */
 
 
 /********************
-  Fonts 
+  Variable Overrides
 ********************/
 
-@font-face {
-  font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-}
+@import "partials/variables";
+
+/********************
+  Bootstrap
+********************/
+
+@import "bootstrap/bootstrap-sprockets";
+@import "bootstrap/bootstrap";
 
 /********************
   Styles
 ********************/
 
-@import "partials/footer.scss";
-@import "partials/nav.scss";
+@import "partials/footer";
+@import "partials/nav";
+@import "partials/post";
 
 #blog-logo img {
 	display: block;
@@ -78,33 +84,6 @@
 }
 
 .publish-date {
-}
-
-/* SINGLE POST */
-
-.post-template .post {
-}
-
-.post-template .post-header {
-	padding: 4em 0;
-}
-
-.post-content {
-	margin-bottom: 2em;
-}
-
-.post-content img {
-}
-
-.post-footer {
-}
-
-.post-footer .author {
-	margin-bottom: 2em;
-}
-
-.post-footer .share {
-	margin-bottom: 2em;
 }
 
 /* PAGINATION */
