@@ -1,17 +1,17 @@
 @media (min-width: $screen-sm-min) {
-    .navbar-fixed-top {
-        position: relative;
-        top: auto;
-    }
-    .navbar-collapse {
-        max-height: none;
-    }
-    body {
-        margin-top: 0;
-    }
+  .navbar-fixed-top {
+      position: relative;
+      top: auto;
+  }
+  .navbar-collapse {
+      max-height: none;
+  }
 }
 @media (max-width: $screen-xs-max) {
-    body {
-        margin-top: $navbar-height + $navbar-margin-bottom;
-    }
+  body {
+      margin-top: $navbar-height + $navbar-margin-bottom;
+  }
+  body.home-template{
+    margin-top: 0;
+  }
 }

@@ -29,6 +29,15 @@
   
   
 	{{! Everything else gets inserted here }}
+  {{#is "home"}}
+  <header {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
+  <div class="row">
+    <div class="col-lg-12">
+    </div>
+  </div>
+  </header>
+  {{/is}}
+  
   <div class="container">
 	  {{{body}}}
   </div>

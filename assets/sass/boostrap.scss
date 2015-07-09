@@ -22,6 +22,7 @@
 
 @import "partials/footer";
 @import "partials/nav";
+@import "partials/home";
 @import "partials/post";
 
 #blog-logo img {
@@ -39,52 +40,7 @@
 	margin-bottom: 2em;
 }
 
-.post {
-}
 
-.post-title {
-}
-
-.post-title a {
-}
-
-.post-excerpt p {
-	margin-top: 1em;
-}
-
-.post-meta {
-	text-transform: uppercase;
-	font-size: 0.75em;
-	letter-spacing: 1px;
-	margin-bottom: 1em;
-}
-
-.post-meta a {
-}
-
-.post-meta a:hover {
-}
-
-.user-meta {
-}
-
-.user-image {
-}
-
-.user-name {
-}
-
-.user-bio {
-}
-
-.publish-meta {
-}
-
-.publish-heading {
-}
-
-.publish-date {
-}
 
 /* PAGINATION */
 .pagination {

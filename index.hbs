@@ -4,17 +4,6 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{! The big featured header on the homepage, with the site logo and description }}
-<header>
-  <div class="row">
-    <div class="col-lg-12">
-    	{{#if @blog.logo}}
-    	<a href="{{@blog.url}}">
-    		<img src="{{@blog.logo}}" alt="Blog Logo" />
-    	</a>
-    	{{/if}}
-    </div>
-  </div>
-</header>
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">

@@ -4,15 +4,52 @@
 
 $brand-primary: #00ADEF;
 
+
+//== Default Navbar
+//
+//## For normal pages
+
 $navbar-default-color:             #777;
 $navbar-default-bg:                #FFF;
 $navbar-default-border:            transparent;
 
 // Navbar links
-//$navbar-default-link-color:                #777 !default;
-//$navbar-default-link-hover-color:          #333 !default;
-//$navbar-default-link-hover-bg:             transparent !default;
-//$navbar-default-link-active-color:         #555 !default;
-//$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-//$navbar-default-link-disabled-color:       #ccc !default;
-//$navbar-default-link-disabled-bg:          transparent !default;
+$navbar-default-link-color:                #777 ;
+$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color:               $navbar-default-link-color !default;
+$navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 10%) !default;
+$navbar-default-brand-hover-bg:            transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg:           #ddd !default;
+$navbar-default-toggle-icon-bar-bg:        #888 !default;
+$navbar-default-toggle-border-color:       #ddd !default;
+
+//== Home Navbar
+//
+//## For the homepage
+
+$navbar-home-color:             #FFF;
+$navbar-home-bg:                transparent;
+$navbar-home-border:            transparent;
+
+// Navbar links
+$navbar-home-link-color:                $navbar-home-color;
+$navbar-home-link-hover-color:          darken($navbar-home-color, 10%);
+$navbar-home-link-hover-bg:             transparent;
+$navbar-home-link-active-color:         #ccc;
+$navbar-home-link-active-bg:            transparent;
+$navbar-home-link-disabled-color:       #777;
+$navbar-home-link-disabled-bg:          transparent;
+
+// Navbar toggle
+$navbar-home-toggle-hover-bg:           transparent;
+$navbar-home-toggle-icon-bar-bg:        $navbar-home-color;
+$navbar-home-toggle-border-color:       transparent;
