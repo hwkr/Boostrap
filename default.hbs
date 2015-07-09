@@ -16,9 +16,7 @@
     {{! Styles'n'Scripts }}
     <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/css/boostrap.min.css" />
-    {{! insert font link here
-    	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400" />
-  	}}
+    	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat|Open+Sans:700,500,400" />
 
   	{{! Ghost outputs important style and meta data with this tag }}
   	{{ghost_head}}
@@ -30,28 +28,34 @@
   
 	{{! Everything else gets inserted here }}
   {{#is "home"}}
-  <header {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
-  <div class="row">
-    <div class="col-lg-12">
+  <header class="home-header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 auto-color vertical-center">
+          <h2>Hello! My name is</h2>
+          <h1><span class="brand"><em>Ben</em> Hawker</span></h1>
+          <h2>I'm a designer in Victoria, BC</h2>
+        </div>
+      </div>
     </div>
-  </div>
   </header>
   {{/is}}
   
-  <div class="container">
-	  {{{body}}}
-  </div>
+  {{{body}}}
 
       
   <footer class="footer">
     <div class="container">
-      <div class="col-sm-10">
-        <div class="text-muted">
-          <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2015 &bull; All rights reserved.</section>
+      <div class="row">
+      <div class="col-sm-8">
+          <div class="text-muted">
+            <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2015 <span class="text-nowrap">&bull; All rights reserved.</span>
+            </section>
+          </div>
         </div>
-      </div>
-      <div class="col-sm-2 text-right">
-        <a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a>
+        <div class="col-sm-4 text-right">
+          <a href="{{@blog.url}}/rss/"><i class="fa fa-rss"></i></a>
+        </div>
       </div>
     </div>
   </footer>
@@ -61,6 +65,7 @@
 
   {{! The main JavaScript file for Boo }}
   <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/background-check.min.js"></script>
   <script type="text/javascript" src="/assets/js/index.js"></script>
 
 </body>

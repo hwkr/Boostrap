@@ -1,0 +1,31 @@
+//
+// Typography
+// --------------------------------------------------
+
+
+// Brand
+// -------------------------
+
+.brand {
+  font-family: $brand-font;
+  em {
+    text-decoration: none;
+    color: $brand-primary;
+    font-style: normal;
+  }
+}
+
+
+.auto-color {
+    &.background--light {
+      color: $gray-darker;
+    }
+
+    &.background--dark {
+      color: $gray-lighter;
+    }
+
+    &.background--complex {
+      color: $gray;
+    }
+}

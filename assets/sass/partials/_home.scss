@@ -3,116 +3,43 @@ html, body {
 }
 
 .home-template {
-  header {
+  .home-header {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-  }
-}
-
-.navbar-home {
-  @extend .navbar-default;
-  
-  position: absolute;
-  
-  background-color: $navbar-home-bg;
-  border-color: $navbar-home-border;
-  
-  .navbar-brand {
-    visibility: collapse;
-  }
-  .navbar-text {
-    color: $navbar-home-color;
-  }
-  
-  .navbar-nav {
-    > li > a {
-      color: $navbar-home-link-color;
-
-      &:hover,
-      &:focus {
-        color: $navbar-home-link-hover-color;
-        background-color: $navbar-home-link-hover-bg;
-      }
+    
+    h1, h2 {
+      margin: 5px 0px; 
     }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-home-link-active-color;
-        background-color: $navbar-home-link-active-bg;
-      }
+    h1 {
+      margin-left: -0.08em;
     }
-    > .disabled > a {
-      &,
-      &:hover,
-      &:focus {
-        color: $navbar-home-link-disabled-color;
-        background-color: $navbar-home-link-disabled-bg;
-      }
+    
+    @media (min-width: $screen-sm-min) {
+      h1 { font-size: 8vw; }
+      h2 { font-size: 3vw; }
     }
-  }
-
-  .navbar-toggle {
-    border-color: $navbar-home-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $navbar-home-toggle-hover-bg;
+    @media (max-width: $screen-xs-max) {
+      h1 { font-size: 14vw; }
+      h2 { font-size: 5vw; }
     }
-    .icon-bar {
-      background-color: $navbar-home-toggle-icon-bar-bg;
-    }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: $navbar-home-border;
-  }
-
-  // Dropdown menu items
-  .navbar-nav {
-    // Remove background color from open dropdown
-    > .open > a {
-      &,
-      &:hover,
-      &:focus {
-        background-color: $navbar-home-link-active-bg;
-        color: $navbar-home-link-active-color;
-      }
-    }
-
-    @media (max-width: $grid-float-breakpoint-max) {
-      // Dropdowns get custom display when collapsed
-      .open .dropdown-menu {
-        > li > a {
-          color: $navbar-home-link-color;
-          &:hover,
-          &:focus {
-            color: $navbar-home-link-hover-color;
-            background-color: $navbar-home-link-hover-bg;
-          }
-        }
-        > .active > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $navbar-home-link-active-color;
-            background-color: $navbar-home-link-active-bg;
-          }
-        }
-        > .disabled > a {
-          &,
-          &:hover,
-          &:focus {
-            color: $navbar-home-link-disabled-color;
-            background-color: $navbar-home-link-disabled-bg;
-          }
-        }
+    
+    .container {
+      height: 100%;
+      .row {
+        height: 100%;
+        display: table;
+        table-layout: fixed;
       }
     }
   }
 }
-  
+
+.vertical-center {
+  display:table-cell;
+  vertical-align: middle;
+  float: none;
+}
 
 
