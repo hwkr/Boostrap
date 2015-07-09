@@ -7,12 +7,7 @@
   },
   "bugs": "https://github.com/bitHero/boostrap/issues",
   "contributors": "https://github.com/bitHero/boostrap/graphs/contributors",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/bitHero/boostrap/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "scripts": {
     "watch": "sass --watch assets/sass/boostrap.scss:assets/css/boostrap.min.css --style compressed",
     "build": "sass assets/sass/boostrap.scss assets/css/boostrap.min.css --style compressed"
