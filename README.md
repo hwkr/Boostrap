@@ -1,13 +1,25 @@
-# boostrap
+# Boostrap
 
-A starter Ghost theme with Twitter Bootstrap integration. This theme has only bare bones in it to allow you to quickly develop your own theme. Twitter Bootstrap 3 has been included, and all the components, styles, etc… are available for use. 
+A Ghost theme using Bootstrap.
 
-# misc
+## Setup
 
-author: matt lambert
+To make sure the sass is built, run:
 
-web: [cardeo.ca](http://cardeo.ca)
+```bash
+npm run build
+```
 
-twitter: [@cardeo](http://twitter.com/cardeo)
+## Development
+
+To activate the Sass watcher,
+
+```bash
+npm run watch
+```
+
+## Origin
+
+Originally forked from a barebones theme (also called Boostrap) by Matt Lambert.
 
 
