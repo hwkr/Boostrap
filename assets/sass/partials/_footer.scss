@@ -17,4 +17,9 @@ body {
       text-align: center;
     }
   }
+  @media (min-width: $screen-sm-min) {
+    .social {
+      text-align: right;
+    }
+  }
 }

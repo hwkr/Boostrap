@@ -34,20 +34,6 @@
       </div>
 
       <footer class="post-footer">
-
-      	{{#if author}}
-          <div class="row">
-            <div class="col-lg-12">
-          		<section class="author">
-                <div class="well">
-            			<h4>{{author.name}}</h4>
-            			<p class="text-muted">{{author.bio}}</p>
-                </div>
-          		</section>
-            </div>
-          </div>
-      	{{/if}}
-
         <div class="row">
           <div class="col-lg-12">
           	<section class="share">
@@ -55,17 +41,17 @@
           		<a 
           			href="http://twitter.com/share?text={{title}}&url={{url absolute="true"}}"
           			onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-          			Twitter
+                  <i class="fa fa-twitter fa-fw"></i>
           		</a>
           		<a 
           			href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
           			onclick="window.open(this.href, 'facebook-share', 'width=580,height=296');return false;">
-          			Facebook
+                  <i class="fa fa-facebook fa-fw"></i>
           		</a>
           		<a 
           			href="https://plus.google.com/share?url={{url absolute="true"}}"
           			onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-          			Google+
+                  <i class="fa fa-google-plus fa-fw"></i>
           		</a>
           	</section>
           </div>

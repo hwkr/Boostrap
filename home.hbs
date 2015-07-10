@@ -1,0 +1,43 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+
+
+<header class="home-header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 auto-color vertical-center">
+        <h2>Hello! I'm</h2>
+        <h1><span class="brand"><em>Ben</em> Hawker</span></h1>
+        <h2>I'm a designer in Victoria, BC</h2>
+      </div>
+    </div>
+  </div>
+</header>              
+
+{{! The main content area on the homepage }}
+<main class="content" role="main">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8">
+    
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 id="blog">Blog</h1>
+          </div>
+        </div>
+        
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+        
+      </div>
+      <div class="col-lg-4">
+        <h1>Contact</h1>
+      </div>
+    </div>
+  </div>
+</main>

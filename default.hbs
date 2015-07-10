@@ -26,22 +26,8 @@
   {{navigation}}
   
   
-	{{! Everything else gets inserted here }}
-  {{#is "home"}}
-  <header class="home-header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 auto-color vertical-center">
-          <h2>Hello! I'm</h2>
-          <h1><span class="brand"><em>Ben</em> Hawker</span></h1>
-          <h2>I'm a designer in Victoria, BC</h2>
-        </div>
-      </div>
-    </div>
-  </header>
-  {{/is}}
-  
-  {{{body}}}
+	{{! Everything else gets inserted here }}  
+    {{{body}}}
 
       
   <footer class="footer">
@@ -54,12 +40,15 @@
           </div>
         </div>
         <div class="col-sm-4">
-          <a href="{{@blog.url}}"><i class="fa fa-linkedin fa-fw"></i></a>
-          <a href="{{@blog.url}}"><i class="fa fa-google-plus fa-fw"></i></a>
-          <a href="{{@blog.url}}"><i class="fa fa-facebook fa-fw"></i></a>
-          <a href="{{@blog.url}}"><i class="fa fa-github fa-fw"></i></a>
-          <a href="{{@blog.url}}"><i class="fa fa-steam fa-fw"></i></a>
-          <a href="{{@blog.url}}/rss/"><i class="fa fa-rss fa-fw"></i></a>
+          <section class="social">
+            <a href="{{@blog.url}}"><i class="fa fa-linkedin fa-fw"></i></a>
+            <a href="{{@blog.url}}"><i class="fa fa-twitter fa-fw"></i></a>
+            <a href="{{@blog.url}}"><i class="fa fa-google-plus fa-fw"></i></a>
+            <a href="{{@blog.url}}"><i class="fa fa-facebook fa-fw"></i></a>
+            <a href="{{@blog.url}}"><i class="fa fa-github fa-fw"></i></a>
+            <a href="{{@blog.url}}"><i class="fa fa-steam fa-fw"></i></a>
+            <a href="{{@blog.url}}/rss/"><i class="fa fa-rss fa-fw"></i></a>
+          </section>
         </div>
       </div>
     </div>

@@ -11,41 +11,10 @@
     
     <div class="row">
       <div class="col-lg-8">
-    
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 id="blog">Blog</h1>
-          </div>
-        </div>
-
-        {{! Each post will be output using this markup }}
-        {{#foreach posts}}
-        <div class="row">
-          <div class="col-lg-12">
-            <article class="{{post_class}}">
-              <header class="post-header">
-                <h2 class="post-title">
-                  <a href="{{url}}">{{{title}}}</a>
-                </h2>
-                  <span class="post-meta text-muted">
-                      <time datatime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-                      {{#if tags}} on {{tags}}{{/if}}
-                  </span>
-              </header>
-              <section class="post-excerpt">
-                  <p>{{excerpt}}&hellip;</p>
-              </section>
-            </article>
-          </div>
-        </div>
-
-        {{/foreach}}
-
-        {{!! After all the posts, we have the previous/next pagination links }}
-        {{pagination}}
-      </div>
-      <div class="col-lg-4">
-        <h1>Hello</h1>
+        
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+        
       </div>
     </div>
   </div>
