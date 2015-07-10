@@ -4,17 +4,6 @@
   <div class="container">
     <article class="{{post_class}}">
 
-		{{! Each post has the blog logo at the top, with a link back to the home page }}
-      <header class="post-header">
-        <a id="blog-logo" href="{{@blog.url}}">
-          {{#if @blog.logo}}
-            <img src="{{@blog.logo}}" alt="Blog Logo" />
-          {{else}}
-            {{@blog.title}}
-          {{/if}}
-        </a>
-      </header>
-
       {{! Everything inside the #post tags pulls data from the post }}
       {{#post}}
 

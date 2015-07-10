@@ -1,11 +1,20 @@
-html {
+body {
   min-height: 100%;
   position: relative;
+  padding-bottom: 2*$navbar-height;
 }
 
 .footer {
+  position: absolute;
   padding: 10px 0px;
   bottom: 0;
   width: 100%;
-  min-height: 40px;
+  min-height: $navbar-height;
+  max-height: 2*$navbar-height;
+  
+  @media (max-width: $screen-xs-max) {
+    .container {
+      text-align: center;
+    }
+  }
 }

@@ -1,3 +1,11 @@
+//
+// Navigation
+// --------------------------------------------------
+
+
+// Sticky Navbar
+// -------------------------
+
 @media (min-width: $screen-sm-min) {
   .navbar-fixed-top {
       position: relative;
@@ -16,9 +24,8 @@
   }
 }
 
-/***************************
-    Home Page Nav
-****************************/
+// Home Nav
+// -------------------------
 
 .navbar-home {
   @extend .navbar-default;

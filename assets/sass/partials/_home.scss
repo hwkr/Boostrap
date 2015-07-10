@@ -1,8 +1,11 @@
-html, body {
+html {
   height: 100%;
 }
 
 .home-template {
+  height: 100%;
+  padding: 0;
+  
   .home-header {
     width: 100%;
     height: 100%;
@@ -33,6 +36,10 @@ html, body {
         table-layout: fixed;
       }
     }
+  }
+  
+  .footer {
+    position: static;
   }
 }
 
