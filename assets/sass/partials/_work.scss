@@ -1,0 +1,30 @@
+//
+// Work
+// --------------------------------------------------
+
+
+// Work Card
+// -------------------------
+
+.work-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: $border-radius-base;
+  overflow: hidden;
+  
+  .expand {
+    min-height: 196px;
+  }
+  .actions {
+    @extend .container;
+    
+    background: transparentize($gray-darker, 0.2);
+    padding: $padding-large-vertical $padding-large-horizontal;
+    width: 100%;
+    
+    a {
+      color: $gray-lighter;
+    }
+  }
+}

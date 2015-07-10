@@ -1,0 +1,46 @@
+{{!< default}}
+
+<main class="content" role="main">
+  <div class="container">
+    <article class="{{post_class}}">
+
+      {{! Everything inside the #post tags pulls data from the post }}
+      {{#post}}
+
+
+      {{!content}}
+<div class="row">
+  <div class="col-lg-8">
+    <h2>Projects</h2>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="work-card">
+          Hello!
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <h2>In Progress</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="work-card" style="background: url(/content/images/2015/07/Locale-Logo-04.png) center / cover">
+          <div class="expand"></div>
+          <div class="actions">
+            <div class="col-xs-6">
+              <a href="http://behance.com/" target="_blank"><i class="fa fa-behance"></i> Behance</a>
+            </div>
+            <div class="col-xs-6">
+              <a href="http://getlocale.me/" target="_blank"><i class="fa fa-link"></i> Live Site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      {{/post}}
+
+    </article>
+  </div>
+</main>
