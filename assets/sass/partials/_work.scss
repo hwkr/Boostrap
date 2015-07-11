@@ -15,8 +15,18 @@
   overflow: hidden;
   margin: $padding-base-vertical 0;
   
+  
+  &:hover > .expand {
+    visibility: visible;
+  }
+  
   .expand {
     min-height: 196px;
+    background: transparentize($gray-darker, 0.2);
+    visibility: hidden;
+    vertical-align: middle;
+    text-align: center;
+    color: $gray-lighter;
   }
   .actions {
     @extend .container;
