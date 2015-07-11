@@ -10,8 +10,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: $gray-lighter;
   border-radius: $border-radius-base;
   overflow: hidden;
+  margin: $padding-base-vertical 0;
   
   .expand {
     min-height: 196px;
