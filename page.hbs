@@ -1,0 +1,16 @@
+{{!< default}}
+
+<main class="content" role="main">
+  <div class="container">
+    <article class="{{post_class}}">
+
+      {{! Everything inside the #post tags pulls data from the post }}
+      {{#post}}
+
+        <h1 class="post-title page-header">{{{title}}}</h1>
+        {{content}}
+      {{/post}}
+
+    </article>
+  </div>
+</main>
