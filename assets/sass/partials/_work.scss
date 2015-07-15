@@ -7,6 +7,7 @@
 // -------------------------
 
 .work-card {
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -21,12 +22,26 @@
   }
   
   .expand {
+    @extend .btn;
+
+    display: block;
+    border-radius: 0;
+    margin: 0;
+    padding: 44px;
+    border: none;
+
     min-height: 196px;
     background: transparentize($gray-darker, 0.2);
     visibility: hidden;
     vertical-align: middle;
     text-align: center;
-    color: $gray-lighter;
+    color: transparentize($gray-lighter, 0.2);
+
+    font-size: 5em;
+
+    &:hover {
+      color: transparentize($gray-lighter, 0.1);
+    }
   }
   .actions {
     @extend .container;
