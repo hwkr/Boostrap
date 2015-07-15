@@ -10,16 +10,28 @@
 
         // On the home page, move the blog icon inside the header 
         // for better relative/absolute positioning.
-        
-        //$("#blog-logo").prependTo("#site-head-content");
-        
-        
+
         //Background Check for main text
         BackgroundCheck.init({
           targets: '.auto-color',
           images: '.home-header'
         });
-        BackgroundCheck.refresh();
+
+        //Watch for smooth scroll
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
     });
 
 }(jQuery));
