@@ -1,0 +1,158 @@
+//
+// Contact
+// --------------------------------------------------
+
+// Odamae Contact Form
+// -------------------------
+
+/*** form input ***/
+
+#odamae-contact-form {
+  .row {
+    margin-top: $line-height-computed;
+  }
+}
+
+.odamae-input,
+.odamae-select,
+.odamae-textarea {
+  @extend .form-control;
+}
+
+/*** Buttons ***/
+
+.odamae-submit {
+  float: right;
+}
+
+.odamae-submit.success {
+  @extend .btn-success;
+}
+
+/*** visual captcha styles ***/
+
+.visualCaptcha {
+}
+
+/*** audio styles ***/
+
+.visualCaptcha .audioField {
+  margin-top: 5px;
+}
+
+/*** END audio styles ***/
+
+/*** captcha explanation such as "select pencil", modify if required ***/
+
+.accessibility-description, .visualCaptcha-explanation, .visualCaptchaStatus.valid {
+  font-size: $font-size-large;
+  max-width: 300px;
+}
+
+/*** error message ***/
+
+.visualCaptchaStatus.error {
+  @extend .alert, .alert-danger;
+}
+
+.visualCaptcha-explanation {
+}
+
+.visualCaptcha-possibilities {
+  @extend .btn-group, .btn-group-lg, .btn-group-justified;
+
+  .img {
+    @extend .btn, .btn-default;
+  }
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.visualCaptcha-possibilities .visualCaptcha-selected {
+  @extend .active;
+}
+
+.visualCaptcha-button-group {
+  @extend .btn-group;
+  float: right;
+  position: relative;
+  top: -94px;
+}
+
+.visualCaptcha-hide + .visualCaptcha-button-group {
+  top: -84px;
+}
+
+.visualCaptcha-refresh-button {
+  @extend .btn, .btn-default;
+}
+
+.visualCaptcha-refresh-button img {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+}
+
+.visualCaptcha-accessibility-button {
+  @extend .btn, .btn-default;
+}
+
+.visualCaptcha-accessibility-button img {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+div.visualCaptcha .visualCaptcha-show {
+  -webkit-animation: fadeIn 300ms;
+  animation: fadeIn 300ms;
+}
+
+div.visualCaptcha .visualCaptcha-hide {
+  display: none !important;
+  -webkit-animation: fadeOut 300ms;
+  animation: fadeOut 300ms;
+}
