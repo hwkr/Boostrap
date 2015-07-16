@@ -7,10 +7,71 @@
       {{! Everything inside the #post tags pulls data from the post }}
       {{#post}}
 
-        <h1 class="post-title page-header">{{{title}}}</h1>
-        {{content}}
+        <h1 class="post-title">{{{title}}}</h1>
+        {{!content}}
+
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>Message</h2>
+            <script type="text/javascript" src="https://odamae.io/form/js/light.js"></script>
+            <input type="hidden" id="odamae-use-css" value="false">
+
+            <form id="odamae-contact-form" method="post" style="display: none">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="odamae-input form-control" name="name" id="name" value=""
+                           placeholder="Batman"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Email</label>
+                    <input type="text" class="odamae-input form-control" name="contact" id="contact" value=""
+                           placeholder="notBruce@WayneEnterprises.com"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="name">Message</label>
+                    <textarea class="odamae-textarea form-control" name="message" id="message"
+                              placeholder="What did Batman say to Robin before they got in the Batmobile?&#13;&#10;&quot;Robin, get in the Batmobile.&quot;"
+                              rows="6"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row actions">
+                <div class="col-md-6">
+                  <div class="visual-captcha"></div>
+                </div>
+                <div class="col-md-4 col-md-offset-2">
+                  <input type="submit" class="btn btn-primary btn-lg btn-block odamae-submit" value="Send Message"
+                         onclick="odamaeSubmit(this)" data-apikey="odamae.io_6ae9018722eddc598febea2952766529_c4da"/>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <h2>Social</h2>
+
+          </div>
+          <div class="col-lg-4">
+            <h2>Tweet</h2>
+            <a class="twitter-timeline" href="https://twitter.com/heroicByte" data-widget-id="621354230301863936">Tweets
+              by @heroicByte</a>
+            <script>!function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+              if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + "://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+              }
+            }(document, "script", "twitter-wjs");</script>
+          </div>
+        </div>
+      </div>
+
       {{/post}}
 
     </article>
   </div>
+
 </main>
