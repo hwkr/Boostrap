@@ -31,18 +31,33 @@
 {{! Everything else gets inserted here }}
 {{{body}}}
 
+<div class="popover fade top in" style="top: -202px; left: 0px; display: block;">
+  <div class="arrow" style="left: 19.811320754717%;"></div>
+  <h3 class="popover-title">Dismissible popover</h3>
+
+  <div class="popover-content">All content copyright Ben Hawker © 2015 • All rights reserved.</div>
+</div>
 
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-8 col-xs-2">
         <div class="text-muted">
-          <section class="copyright hidden-xs">All content copyright <a href="/">{{@blog.title}}</a> &copy;
+          <section class="copyright">
+            <span class="hidden-xs">
+            All content copyright <a href="/">{{@blog.title}}</a> <i class="fa fa-copyright"></i>
             2015 &bull; All rights reserved.
+            </span>
+            <span class="visible-xs">
+              <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-placement="top"
+                 data-content="All content copyright {{@blog.title}} &copy;&nbsp;2015 &bull; All rights reserved.">
+                <i class="fa fa-copyright"></i>
+              </a>
+            </span>
           </section>
         </div>
       </div>
-      <div class="col-sm-4">
+      <div class="col-sm-4 col-xs-10">
         <section class="social">
           <a href="http://ca.linkedin.com/pub/ben-hawker/85/96a/42b/" target="_blank"><i
               class="fa fa-linkedin fa-fw"></i></a>
