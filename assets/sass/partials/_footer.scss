@@ -11,15 +11,8 @@ body {
   width: 100%;
   min-height: $navbar-height;
   max-height: 2*$navbar-height;
-  
-  @media (max-width: $screen-xs-max) {
-    .container {
-      text-align: center;
-    }
-  }
-  @media (min-width: $screen-sm-min) {
-    .social {
-      text-align: right;
-    }
+
+  .social {
+    text-align: right;
   }
 }
