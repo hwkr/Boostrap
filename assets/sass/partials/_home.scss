@@ -13,10 +13,13 @@ html {
   .home-header {
     width: 100%;
     height: 100%;
+    background-color: $gray-darker;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    
+    color: $gray-lighter;
+
+
     h1, h2 {
       margin: 5px 0px; 
     }

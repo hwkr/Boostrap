@@ -2,7 +2,6 @@
 // Typography
 // --------------------------------------------------
 
-
 // Brand
 // -------------------------
 
@@ -19,15 +18,15 @@
 // -------------------------
 
 .auto-color {
-    &.background--light {
-      color: $gray-darker;
-    }
+  &.background--light {
+    color: $gray-darker;
+  }
 
-    &.background--dark {
-      color: $gray-lighter;
-    }
+  &.background--dark {
+    color: $gray-lighter;
+  }
 
-    &.background--complex {
-      color: $gray;
-    }
+  &.background--complex {
+    color: $gray;
+  }
 }

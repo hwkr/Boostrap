@@ -1,5 +1,5 @@
 /**
- * Main JS file for Boo behaviours
+ * Main JS file for Boohaviours
  */
 
 /*globals jQuery, document */
@@ -8,14 +8,21 @@
 
     $(document).ready(function(){
 
-        // On the home page, move the blog icon inside the header 
-        // for better relative/absolute positioning.
-
         //Background Check for main text
-        BackgroundCheck.init({
-          targets: '.auto-color',
-          images: '.home-header'
-        });
+        try {
+            BackgroundCheck.init({
+                targets: '.auto-color',
+                images: '.home-header'
+            });
+        }
+        catch (err) {
+            console.log("Background Checker Failed to Initialize: " + err);
+        }
+
+        // Popover
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
 
         //Watch for smooth scroll
         $(function () {
@@ -32,11 +39,11 @@
                 }
             });
         });
-
-        // Popover
-        $(function () {
-            $('[data-toggle="popover"]').popover()
-        })
     });
+
+    $(window).load(function () {
+        BackgroundCheck.refresh();
+    });
+
 
 }(jQuery));
