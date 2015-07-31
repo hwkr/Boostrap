@@ -30,10 +30,16 @@ html {
     @media (min-width: $screen-sm-min) {
       h1 { font-size: 8vw; }
       h2 { font-size: 3vw; }
+      img {
+        max-width: 80%;
+      }
     }
     @media (max-width: $screen-xs-max) {
       h1 { font-size: 14vw; }
       h2 { font-size: 5vw; }
+      img {
+        max-width: 100%;
+      }
     }
     
     .container {

@@ -17,7 +17,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css"/>
   <link rel="stylesheet" type="text/css" href="/assets/css/prism.css"/>
   <link rel="stylesheet" type="text/css" href="/assets/css/boostrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat|Open+Sans:700,500,400"/>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,500,400"/>
   <link rel="shortcut icon" href="/assets/icons/favicon.ico">
 
   {{! Ghost outputs important style and meta data with this tag }}
@@ -33,9 +33,7 @@
 
 <div class="popover fade top in" style="top: -202px; left: 0px; display: block;">
   <div class="arrow" style="left: 19.811320754717%;"></div>
-  <h3 class="popover-title">Dismissible popover</h3>
-
-  <div class="popover-content">All content copyright Ben Hawker © 2015 • All rights reserved.</div>
+  <div class="popover-content">All content copyright © 2015 • All rights reserved.</div>
 </div>
 
 <footer class="footer">
@@ -59,14 +57,11 @@
       </div>
       <div class="col-sm-4 col-xs-10">
         <section class="social">
-          <a href="http://ca.linkedin.com/pub/ben-hawker/85/96a/42b/" target="_blank"><i
-              class="fa fa-linkedin fa-fw"></i></a>
-          <a href="https://twitter.com/heroicByte" target="_blank"><i class="fa fa-twitter fa-fw"></i></a>
-          <a href="http://plus.google.com/+BenHawkerOfCourse/" target="_blank"><i
+          <a href="https://twitter.com/{{@blog.title}}" target="_blank"><i class="fa fa-twitter fa-fw"></i></a>
+          <a href="http://plus.google.com/{{@blog.title}}" target="_blank"><i
               class="fa fa-google-plus fa-fw"></i></a>
-          <a href="http://www.facebook.com/bihawker" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
-          <a href="http://github.com/bitHero" target="_blank"><i class="fa fa-github fa-fw"></i></a>
-          <a href="http://steamcommunity.com/id/byteHero/" target="_blank"><i class="fa fa-steam fa-fw"></i></a>
+          <a href="http://www.facebook.com/{{@blog.title}}" target="_blank"><i class="fa fa-facebook fa-fw"></i></a>
+          <a href="http://github.com/{{@blog.title}}" target="_blank"><i class="fa fa-github fa-fw"></i></a>
           <a href="{{@blog.url}}/rss/"><i class="fa fa-rss fa-fw"></i></a>
         </section>
       </div>

@@ -24,6 +24,16 @@
   }
 }
 
+// General Nav
+// -------------------------
+
+.navbar-brand.blog-logo {
+  padding: 5px 10px; // default padding is restrictive for images
+  img {
+    max-height: 100%;
+  }
+}
+
 // Home Nav
 // -------------------------
 

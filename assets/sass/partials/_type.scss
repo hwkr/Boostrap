@@ -7,11 +7,8 @@
 
 .brand {
   font-family: $brand-font;
-  em {
-    text-decoration: none;
-    color: $brand-primary;
-    font-style: normal;
-  }
+  font-weight: bold;
+  color: $brand-primary;
 }
 
 // Auto Color for Background-Check
