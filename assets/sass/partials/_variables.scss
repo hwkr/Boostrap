@@ -2,13 +2,23 @@
 // Core Variables
 // --------------------------------------------------
 
-$brand-primary: #00ADEF;
-
-
 $font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
 
 $brand-font: "Open Sans", Helvetica, Arial, sans-serif;
 
+//== Colors
+//
+//## Gray and brand colors for use across Boostrap.
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+
+$brand-primary: #00ADEF;
 
 //== Default Navbar
 //
@@ -46,8 +56,7 @@ $navbar-home-bg:                transparent;
 $navbar-home-border:            transparent;
 
 // Navbar links
-$navbar-home-link-color:                $navbar-home-color;
-$navbar-home-link-hover-color:          darken($navbar-home-color, 10%);
+$navbar-home-link-color:                $gray;
 $navbar-home-link-hover-bg:             transparent;
 $navbar-home-link-active-color:         #ccc;
 $navbar-home-link-active-bg:            transparent;
@@ -55,6 +64,7 @@ $navbar-home-link-disabled-color:       #777;
 $navbar-home-link-disabled-bg:          transparent;
 
 // Navbar toggle
+$navbar-home-toggle-bg:                 transparent;
 $navbar-home-toggle-hover-bg:           transparent;
 $navbar-home-toggle-icon-bar-bg:        $navbar-home-color;
 $navbar-home-toggle-border-color:       transparent;

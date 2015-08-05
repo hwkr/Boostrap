@@ -14,6 +14,8 @@
 // Auto Color for Background-Check
 // -------------------------
 
+// Basic
+
 .auto-color {
   &.background--light {
     color: $gray-darker;
@@ -25,5 +27,39 @@
 
   &.background--complex {
     color: $gray;
+  }
+}
+
+// Mixin
+
+@mixin auto-color($color, $shift) {
+  &.auto-color {
+    &.background--light {
+      color: darken($color, $shift);
+    }
+
+    &.background--dark {
+      color: lighten($color, $shift);
+    }
+
+    &.background--complex {
+      color: $color;
+    }
+  }
+}
+
+@mixin auto-color-background($color, $shift) {
+  &.auto-color {
+    &.background--light {
+      background-color: darken($color, $shift);
+    }
+
+    &.background--dark {
+      background-color: lighten($color, $shift);
+    }
+
+    &.background--complex {
+      background-color: $color;
+    }
   }
 }

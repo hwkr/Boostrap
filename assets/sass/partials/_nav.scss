@@ -31,6 +31,9 @@
   padding: 5px 10px; // default padding is restrictive for images
   img {
     max-height: 100%;
+    &:hover{
+      -webkit-filter: brightness(90%);
+    }
   }
 }
 
@@ -54,40 +57,41 @@
   
   .navbar-nav {
     > li > a {
-      color: $navbar-home-link-color;
+      @include auto-color($navbar-home-link-color, 70%);
 
       &:hover,
       &:focus {
-        color: $navbar-home-link-hover-color;
-        background-color: $navbar-home-link-hover-bg;
+        @include auto-color($navbar-home-link-color, 50%);
+        @include auto-color-background($navbar-home-link-hover-bg, 20%);
       }
     }
     > .active > a {
       &,
       &:hover,
       &:focus {
-        color: $navbar-home-link-active-color;
-        background-color: $navbar-home-link-active-bg;
+        @include auto-color($navbar-home-link-color, 60%);
+        @include auto-color-background($navbar-home-link-active-bg, 20%);
       }
     }
     > .disabled > a {
       &,
       &:hover,
       &:focus {
-        color: $navbar-home-link-disabled-color;
-        background-color: $navbar-home-link-disabled-bg;
+        @include auto-color($navbar-home-link-disabled-color, 20%);
+        @include auto-color-background($navbar-home-link-disabled-bg, 20%);
       }
     }
   }
 
   .navbar-toggle {
+    @include auto-color-background($navbar-home-toggle-bg, 70%);
     border-color: $navbar-home-toggle-border-color;
     &:hover,
     &:focus {
       background-color: $navbar-home-toggle-hover-bg;
     }
     .icon-bar {
-      background-color: $navbar-home-toggle-icon-bar-bg;
+      @include auto-color-background($navbar-home-toggle-icon-bar-bg, 70%);
     }
   }
 
@@ -112,27 +116,27 @@
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
-          color: $navbar-home-link-color;
+          @include auto-color($navbar-home-link-color, 70%);
           &:hover,
           &:focus {
-            color: $navbar-home-link-hover-color;
-            background-color: $navbar-home-link-hover-bg;
+            @include auto-color($navbar-home-link-color, 50%);
+            @include auto-color-background($navbar-home-link-hover-bg, 20%);
           }
         }
         > .active > a {
           &,
           &:hover,
           &:focus {
-            color: $navbar-home-link-active-color;
-            background-color: $navbar-home-link-active-bg;
+            @include auto-color($navbar-home-link-color, 60%);
+            @include auto-color-background($navbar-home-link-active-bg, 20%);
           }
         }
         > .disabled > a {
           &,
           &:hover,
           &:focus {
-            color: $navbar-home-link-disabled-color;
-            background-color: $navbar-home-link-disabled-bg;
+            @include auto-color($navbar-home-link-disabled-color, 20%);
+            @include auto-color-background($navbar-home-link-disabled-bg, 20%);
           }
         }
       }

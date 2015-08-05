@@ -4,9 +4,9 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
               aria-expanded="false" aria-controls="navbar">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar auto-color"></span>
+        <span class="icon-bar auto-color"></span>
+        <span class="icon-bar auto-color"></span>
       </button>
       {{#if @blog.logo}}
         <a class="navbar-brand blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a>
@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav navbar-right">
         {{#foreach navigation}}
           <li class="nav-{{slug}}{{#if current}} active{{/if}}">
-            <a href="{{url absolute="true"}}">
+            <a href="{{url absolute="true"}}" {{#is "home"}}class="auto-color"{{/is}}>
               {{label}}
             </a>
             {{#if current}}

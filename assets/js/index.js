@@ -45,5 +45,9 @@
         BackgroundCheck.refresh();
     });
 
+    $('#navbar').on('shown.bs.collapse', function () {
+        BackgroundCheck.refresh();
+    })
+
 
 }(jQuery));
