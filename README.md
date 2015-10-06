@@ -2,6 +2,7 @@
 
 A fully responsive, open source, theme for [Ghost](https://ghost.org/) using Bootstrap. 
 
+![The theme](http://i.imgur.com/TtadKo5.png)
 
 
 ## Quick Set Up
