@@ -25,7 +25,7 @@ Install dependencies,
 npm install
 ```
 
-You now probably want to build the SASS. Restart your Ghost server and you can select the theme from `Settings > General > Theme`.
+You now probably want to [build the SASS](#building-sass). Restart your Ghost server and you can select the theme from `Settings > General > Theme`.
 
 ### Building SASS
 
