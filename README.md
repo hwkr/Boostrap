@@ -1,8 +1,20 @@
 # Boostrap
 
-A Ghost theme using Bootstrap.
+A fully responsive, open source, theme for [Ghost](https://ghost.org/) using Bootstrap.
 
-## Setup
+## Quick Start Installation
+
+So quick. Just kidding, pretty slow still (todo: make this faster).
+
+
+
+```bash
+npm run build
+```
+
+## Development Installation
+
+To get str
 
 To make sure the sass is built, run:
 
