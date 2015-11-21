@@ -15,6 +15,9 @@
         {{else}}
           <h1 class="brand auto-color">{{@blog.title}}</h1>
         {{/if}}
+        {{#if @blog.description}}
+          <p>{{@blog.description}}</p>
+        {{/if}}
       </div>
     </div>
   </div>

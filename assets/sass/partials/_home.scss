@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 
-.home-template {
+.page-home {
   height: 100%;
   padding: 0;
   
@@ -20,8 +20,8 @@ html {
     color: $gray-lighter;
 
 
-    h1, h2 {
-      margin: 5px 0px; 
+    h1, h2, p {
+      margin: 10px 0px;
     }
     h1 {
       margin-left: -0.08em;
@@ -29,14 +29,14 @@ html {
     
     @media (min-width: $screen-sm-min) {
       h1 { font-size: 8vw; }
-      h2 { font-size: 3vw; }
+      p { font-size: 3vw; }
       img {
-        max-width: 80%;
+        max-width: 50%;
       }
     }
     @media (max-width: $screen-xs-max) {
       h1 { font-size: 14vw; }
-      h2 { font-size: 5vw; }
+      p { font-size: 5vw; }
       img {
         max-width: 100%;
       }
