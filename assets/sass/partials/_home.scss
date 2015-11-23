@@ -3,16 +3,10 @@ html {
 }
 
 .page-home {
-  height: 100%;
-  padding: 0;
-  
-  .content {
-    margin-top: $padding-large-vertical;
-  }
   
   .home-header {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: $gray-darker;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,7 +14,7 @@ html {
     color: $gray-lighter;
 
 
-    h1, h2, p {
+    h1, h2 {
       margin: 10px 0px;
     }
     h1 {
@@ -29,14 +23,14 @@ html {
     
     @media (min-width: $screen-sm-min) {
       h1 { font-size: 8vw; }
-      p { font-size: 3vw; }
+      h2 { font-size: 2vw; }
       img {
         max-width: 50%;
       }
     }
     @media (max-width: $screen-xs-max) {
       h1 { font-size: 14vw; }
-      p { font-size: 5vw; }
+      h2 { font-size: 4vw; }
       img {
         max-width: 100%;
       }
@@ -48,6 +42,23 @@ html {
         height: 100%;
         display: table;
         table-layout: fixed;
+      }
+    }
+  }
+
+  .callout {
+    background: $brand-primary;
+
+    blockquote {
+      margin: 75px 40px;
+      border: none;
+      color: #FFF;
+
+      font-size: $font-size-h1;
+
+      footer {
+        color: $gray-lighter;
+        text-align: right;
       }
     }
   }
