@@ -11,6 +11,7 @@ body {
   width: 100%;
   min-height: $navbar-height;
   max-height: 2*$navbar-height;
+  font-family: $font-family-sans-serif;
 
   .social {
     text-align: right;

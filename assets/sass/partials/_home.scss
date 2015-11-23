@@ -16,6 +16,7 @@ html {
 
     h1, h2 {
       margin: 10px 0px;
+      font-weight: normal;
     }
     h1 {
       margin-left: -0.08em;
@@ -53,8 +54,9 @@ html {
       margin: 75px 40px;
       border: none;
       color: #FFF;
+      font-family: $font-family-sans-serif;
 
-      font-size: $font-size-h1;
+      font-size: $font-size-h2;
 
       footer {
         color: $gray-lighter;
