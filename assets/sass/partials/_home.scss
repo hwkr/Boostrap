@@ -47,21 +47,38 @@ html {
     }
   }
 
-  .callout {
+  section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  #callout {
     background: $brand-primary;
 
     blockquote {
-      margin: 75px 40px;
+      margin: 0 40px;
       border: none;
       color: #FFF;
       font-family: $font-family-sans-serif;
 
-      font-size: $font-size-h2;
+      @media (min-width: $screen-sm-min) {
+        font-size: ceil(($font-size-large * 1.25));
+      }
+      @media (max-width: $screen-xs-max) {
+        font-size: $font-size-large;
+      }
+
 
       footer {
         color: $gray-lighter;
         text-align: right;
       }
+    }
+  }
+
+  #projects {
+    .row.project {
+      padding-bottom: 50px;
     }
   }
 }
