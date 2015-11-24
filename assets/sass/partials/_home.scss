@@ -48,8 +48,8 @@ html {
   }
 
   section {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   #callout {
@@ -79,6 +79,25 @@ html {
   #projects {
     .row.project {
       padding-bottom: 50px;
+    }
+  }
+
+  #blog {
+    background: $gray-lighter;
+    .thumbnail {
+
+      img {
+        //@extend .img-rounded;
+
+        height: 240px;
+        width: 100%;
+        object-fit: cover;
+      }
+      p {
+        height: 120px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
   }
 }
