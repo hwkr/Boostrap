@@ -1,0 +1,335 @@
+/* =============================================================================
+  COMMON STUFF FOR CSS DEVICES
+============================================================================= */
+
+.css-device {
+  position: relative;
+  margin: 0 auto;
+
+  > * {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  /* =============================================================================
+    BROWSER
+  ============================================================================= */
+
+  &.css-device--browser {
+    // browser vars
+    $browser-frame-color: #dfdfdf;
+    $browser-close-color: #ff3366;
+    $browser-minimize-color: #ffcc99;
+    $browser-expand-color: #33ff66;
+    $browser-breakpoint-small: 480px;
+
+    width: 100%;
+    /* max-width: 100%; set max width here if you need to. */
+    border-top: solid 36px $browser-frame-color;
+    border-right: solid 2px $browser-frame-color;
+    border-left: solid 2px $browser-frame-color;
+    border-bottom: solid 2px $browser-frame-color;
+    border-radius: 4px 4px 0 0;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -24px;
+      left: 12px;
+      width: 12px;
+      height: 12px;
+      background-color: $browser-close-color;
+      border-radius: 12px;
+      box-shadow: 0 0 0 0 $browser-close-color, 16px 0 0 0 $browser-minimize-color, 32px 0 0 0 $browser-expand-color;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      top: -27px;
+      right: 12px;
+      padding: 0 4px;
+      width: 80%;
+      height: 18px;
+      color: $gray-light;
+      background-color: #fff;
+      font-size: 12px;
+      font-style: italic;
+      line-height: 18px;
+      border-radius: 2px;
+      content: attr(data-url);
+    }
+
+    @media all and (min-width: $browser-breakpoint-small) {
+
+      border-top: solid 48px $browser-frame-color;
+
+      &::before {
+        top: -30px;
+        box-shadow: 0 0 0 0 $browser-close-color, 24px 0 0 0 $browser-minimize-color, 48px 0 0 0 $browser-expand-color;
+      }
+
+      &::after {
+        top: -36px;
+        right: 12px;
+        padding: 0 8px;
+        height: 24px;
+        line-height: 24px;
+      }
+
+    }
+  }
+
+  /* =============================================================================
+    TABLET
+  ============================================================================= */
+
+  &.css-device--tablet {
+    // tablet vars
+    $initial-tablet-width: 240px;
+    $initial-tablet-outline: 12px;
+    $initial-tablet-top-bar: 48px;
+    $initial-tablet-bottom-bar: 48px;
+    $initial-tablet-button: 24px;
+    $initial-tablet-camera: 4px;
+
+    $tablet-frame-color: #ddd;
+    $tablet-button-color: #bbb;
+    $tablet-camera-color: #bbb;
+    $tablet-breakpoint-small: 720px;
+
+    position: relative;
+    width: $initial-tablet-width + $initial-tablet-outline*2;
+    border-top: solid $initial-tablet-top-bar $tablet-frame-color;
+    border-left: solid $initial-tablet-outline $tablet-frame-color;
+    border-right: solid $initial-tablet-outline $tablet-frame-color;
+    border-bottom: solid $initial-tablet-bottom-bar $tablet-frame-color;
+    border-radius: $initial-tablet-outline;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: -$initial-tablet-top-bar/2 - $initial-tablet-camera/2;
+      left: 50%;
+      margin-left: -$initial-tablet-camera/2;
+      width: $initial-tablet-camera;
+      height: $initial-tablet-camera;
+      background-color: $tablet-camera-color;
+      border-radius: $initial-tablet-camera;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -$initial-tablet-button/2 - $initial-tablet-bottom-bar/2;
+      left: 50%;
+      margin-left: -$initial-tablet-button/2;
+      width: $initial-tablet-button;
+      height: $initial-tablet-button;
+      background-color: $tablet-button-color;
+      border-radius: $initial-tablet-button/2;
+      content: "";
+    }
+
+    @media all and (min-width: $tablet-breakpoint-small) {
+
+      width: $initial-tablet-width*1.5 + $initial-tablet-outline*1.5*2;
+      border-top: solid $initial-tablet-top-bar*1.5 $tablet-frame-color;
+      border-left: solid $initial-tablet-outline*1.5 $tablet-frame-color;
+      border-right: solid $initial-tablet-outline*1.5 $tablet-frame-color;
+      border-bottom: solid $initial-tablet-bottom-bar*1.5 $tablet-frame-color;
+      border-radius: $initial-tablet-outline*1.5;
+
+      &::before {
+        top: -$initial-tablet-top-bar*1.5/2 - $initial-tablet-camera*1.5/2;
+        margin-left: -$initial-tablet-camera*1.5/2;
+        width: $initial-tablet-camera*1.5;
+        height: $initial-tablet-camera*1.5;
+        border-radius: $initial-tablet-camera*1.5;
+      }
+
+      &::after {
+        bottom: -$initial-tablet-button*1.5/2 - $initial-tablet-bottom-bar*1.5/2;
+        margin-left: -$initial-tablet-button*1.5/2;
+        width: $initial-tablet-button*1.5;
+        height: $initial-tablet-button*1.5;
+        border-radius: $initial-tablet-button*1.5/2;
+        content: "";
+      }
+
+    }
+  }
+
+  /* =============================================================================
+    MOBILE
+  ============================================================================= */
+
+  &.css-device--mobile {
+    // mobile vars
+    $initial-mobile-width: 160px;
+    $initial-mobile-outline: 12px;
+    $initial-mobile-top-bar: 24px;
+    $initial-mobile-bottom-bar: 48px;
+    $initial-mobile-button: 24px;
+    $initial-mobile-volume-width: 2px;
+    $initial-mobile-volume-height: 12px;
+    $initial-mobile-volume-spacing: 12px;
+
+    $mobile-frame-color: #ddd;
+    $mobile-button-color: #bbb;
+    $mobile-volume-color: #bbb;
+    $mobile-breakpoint-small: 720px;
+
+    width: $initial-mobile-width + $initial-mobile-outline*2;
+    border-top: solid $initial-mobile-top-bar $mobile-frame-color;
+    border-left: solid $initial-mobile-outline $mobile-frame-color;
+    border-right: solid $initial-mobile-outline $mobile-frame-color;
+    border-bottom: solid $initial-mobile-bottom-bar $mobile-frame-color;
+    border-radius: $initial-mobile-outline;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: $initial-mobile-outline;
+      left: -$initial-mobile-outline - $initial-mobile-volume-width;
+      width: $initial-mobile-volume-width;
+      height: $initial-mobile-volume-height;
+      background-color: $mobile-button-color;
+      box-shadow: 0 0 0 0 $mobile-volume-color, 0 $initial-mobile-volume-height + $initial-mobile-volume-spacing 0 0 $mobile-volume-color;
+      border-radius: $initial-mobile-volume-width 0 0 $initial-mobile-volume-width;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: -$initial-mobile-button/2 - $initial-mobile-bottom-bar/2;
+      left: 50%;
+      margin-left: -$initial-mobile-button/2;
+      width: $initial-mobile-button;
+      height: $initial-mobile-button;
+      background-color: $mobile-button-color;
+      border-radius: $initial-mobile-button/2;
+      content: "";
+    }
+
+    @media all and (min-width: $mobile-breakpoint-small) {
+
+      width: $initial-mobile-width*1.5 + $initial-mobile-outline*1.5*2;
+      border-top: solid $initial-mobile-top-bar*1.5 $mobile-frame-color;
+      border-left: solid $initial-mobile-outline*1.5 $mobile-frame-color;
+      border-right: solid $initial-mobile-outline*1.5 $mobile-frame-color;
+      border-bottom: solid $initial-mobile-bottom-bar*1.5 $mobile-frame-color;
+      border-radius: $initial-mobile-outline*1.5;
+
+      &::before {
+        top: $initial-mobile-outline*1.5;
+        left: -$initial-mobile-outline*1.5 - $initial-mobile-volume-width*1.5;
+        width: $initial-mobile-volume-width*1.5;
+        height: $initial-mobile-volume-height*1.5;
+        background-color: $mobile-button-color;
+        box-shadow: 0 0 0 0 $mobile-volume-color, 0 $initial-mobile-volume-height*1.5 + $initial-mobile-volume-spacing*1.5 0 0 $mobile-volume-color;
+        border-radius: $initial-mobile-volume-width*1.5 0 0 $initial-mobile-volume-width*1.5;
+        content: "";
+      }
+
+      &::after {
+        bottom: -$initial-mobile-button*1.5/2 - $initial-mobile-bottom-bar*1.5/2;
+        margin-left: -$initial-mobile-button*1.5/2;
+        width: $initial-mobile-button*1.5;
+        height: $initial-mobile-button*1.5;
+        border-radius: $initial-mobile-button*1.5/2;
+        content: "";
+      }
+    }
+  }
+
+  /* =============================================================================
+  DESKTOP
+  ============================================================================= */
+
+  &.css-device--desktop {
+    // desktop vars
+    $desktop-frame-color: #dfdfdf;
+    $desktop-stand-color: #cccccc;
+    $desktop-button-color: #cccccc;
+    $desktop-button-on-color: #33ff66;
+    $desktop-breakpoint-small: 480px;
+    $desktop-bezel-thickness: 12px;
+    $desktop-frame-thickness: 36px;
+    $desktop-frame-thickness-lg: 36px;
+    $desktop-stand-height: 60px;
+    $desktop-stand-height-lg: 120px;
+
+    width: 100%;
+    /* max-width: 100%; set max width here if you need to. */
+    border-top: solid $desktop-bezel-thickness $desktop-frame-color;
+    border-right: solid $desktop-bezel-thickness $desktop-frame-color;
+    border-left: solid $desktop-bezel-thickness $desktop-frame-color;
+    border-bottom: solid $desktop-frame-thickness $desktop-frame-color;
+    border-radius: 4px;
+    margin-bottom: $desktop-stand-height;
+
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: -24px;
+      right: 36px;
+      width: 12px;
+      height: 12px;
+      background-color: $desktop-button-color;
+      border-radius: 12px;
+      box-shadow: 0 0 0 0 $desktop-button-color, 16px 0 0 0 $desktop-button-color, 32px 0 0 0 $desktop-button-on-color;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      overflow: hidden;
+      position: absolute;
+      bottom: -$desktop-stand-height - $desktop-frame-thickness;
+      right: 35%;
+      padding: 0 5%;
+      width: 30%;
+      height: $desktop-stand-height;
+      background-color: $desktop-stand-color;
+      content: "";
+      border-bottom: solid 12px $desktop-frame-color;
+      border-left: solid 8px transparent;
+      border-right: solid 8px transparent;
+      border-radius: 4px;
+      background-clip: content-box;
+    }
+
+    @media all and (min-width: $desktop-breakpoint-small) {
+
+      border-bottom: solid $desktop-frame-thickness-lg $desktop-frame-color;
+      margin-bottom: $desktop-stand-height-lg;
+
+      &::before {
+        bottom: -24px;
+        right: 56px;
+        box-shadow: 0 0 0 0 $desktop-button-color, 24px 0 0 0 $desktop-button-color, 48px 0 0 0 $desktop-button-on-color;
+      }
+
+      &::after {
+
+        border-bottom: solid 24px $desktop-frame-color;
+        padding: 0 10%;
+
+        bottom: -$desktop-stand-height-lg - $desktop-frame-thickness-lg;
+        right: 35%;
+
+        width: 30%;
+        height: $desktop-stand-height-lg;
+      }
+
+    }
+  }
+}
