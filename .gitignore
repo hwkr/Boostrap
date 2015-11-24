@@ -107,4 +107,5 @@ node_modules
 
 # Built Files
 
-assets/css/slate.min.css
+assets/css/slate*.css
+assets/css/prism.min.css
