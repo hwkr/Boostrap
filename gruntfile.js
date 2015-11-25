@@ -41,6 +41,7 @@ module.exports = function(grunt) {
 
   // Tasks.
   grunt.registerTask('default', ['sass', 'cssmin', 'watch']);
+  grunt.registerTask('build', ['sass', 'cssmin']);
   grunt.registerTask('watcher', ['watch']);
 
 };
