@@ -106,6 +106,7 @@ html {
           object-fit: cover;
         }
         p {
+          margin: 15px auto;
           font-size: $font-size-base;
           line-height: $line-height-base;
           @include ellipses-lines($font-size-base, $line-height-base, 4);
