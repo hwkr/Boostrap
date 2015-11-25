@@ -94,9 +94,9 @@ html {
         object-fit: cover;
       }
       p {
-        height: 120px;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        font-size: $font-size-base;
+        line-height: $line-height-base;
+        @include ellipses-lines($font-size-base, $line-height-base, 4);
       }
     }
   }
