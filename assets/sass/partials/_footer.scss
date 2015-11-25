@@ -1,24 +1,37 @@
 body {
   min-height: 100%;
   position: relative;
-  padding-bottom: 2*$navbar-height;
 }
 
 .footer {
-  position: absolute;
-  padding: 10px 0px;
+  padding: 25px 0px;
   bottom: 0;
   width: 100%;
-  min-height: $navbar-height;
-  max-height: 2*$navbar-height;
-  font-family: $font-family-sans-serif;
 
-  .social {
-    text-align: right;
+  background: $gray-lighter;
+
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-small;
+
+  .logo {
+    img {
+      max-width: 150px;
+      max-height: 90px;
+      width: auto;
+      height: auto;
+    }
   }
+
+
 
   .popover {
     min-width: 279px;
     max-width: 500px;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
