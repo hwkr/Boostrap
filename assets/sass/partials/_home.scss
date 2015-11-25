@@ -48,11 +48,23 @@ html {
   }
 
   section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    .container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid $gray-lighter;
+    }
+
+    &:last-of-type {
+      .container {
+        border-bottom: none;
+      }
+    }
   }
 
   #callout {
+    .container{
+      border-bottom: none;
+    }
     background: $brand-primary;
 
     blockquote {
@@ -83,7 +95,7 @@ html {
   }
 
   #blog {
-    background: $gray-lighter;
+    //background: $gray-lighter;
     .thumbnail {
 
       img {
