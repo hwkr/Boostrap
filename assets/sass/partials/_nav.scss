@@ -19,7 +19,7 @@
   body {
       padding-top: $navbar-height + $navbar-margin-bottom;
   }
-  body.home-template{
+  body.page-home{
     padding-top: 0;
   }
 }
@@ -108,7 +108,7 @@
         &,
         &:hover,
         &:focus {
-          background-color: $navbar-home-link-active-bg;
+          background-color: #FFF;
           color: $navbar-home-link-active-color;
         }
       }
