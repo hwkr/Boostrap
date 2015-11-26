@@ -39,10 +39,30 @@ html {
     
     .container {
       height: 100%;
-      .row {
+      position: relative;
+
+      .hero {
         height: 100%;
         display: table;
         table-layout: fixed;
+        div {
+          @extend .vertical-center;
+        }
+      }
+      .more {
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+      }
+    }
+
+    .btn-scroll-down {
+      @extend .btn-link;
+      color: darken($brand-primary, 20%);
+
+      &:hover {
+        text-decoration: none;
+        color: $brand-primary;
       }
     }
   }

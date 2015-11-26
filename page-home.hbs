@@ -8,8 +8,8 @@
 
 <header class="home-header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
   <div class="container">
-      <div class="row">
-          <div class="col-lg-12 vertical-center">
+      <div class="row hero">
+          <div class="col-lg-12">
               {{#if @blog.logo}}
                   <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
               {{else}}
@@ -18,6 +18,14 @@
               {{#if @blog.description}}
                   <h2>{{@blog.description}}</h2>
               {{/if}}
+          </div>
+      </div>
+      <div class="row more">
+          <div class="col-lg-12 text-center">
+            <a class="btn btn-scroll-down btn-sm" href="#callout">
+                Learn more about what we do<br/>
+                <i class="fa fa-angle-down"></i>
+            </a>
           </div>
       </div>
   </div>
