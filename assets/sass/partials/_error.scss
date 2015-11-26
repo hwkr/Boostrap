@@ -1,0 +1,40 @@
+//
+// Error Page
+// --------------------------------------------------
+
+.page-error {
+  .row {
+    padding: 100px 0;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .row {
+      padding: 200px 0;
+    }
+  }
+
+  svg {
+    font-family: $font-family-base;
+    font-weight: bold;
+
+    circle{
+      fill-opacity: 0.8;
+
+      &:first-of-type {
+        fill: $gray-dark;
+      }
+      &:last-of-type {
+        fill: $brand-primary;
+      }
+    }
+
+    tspan, text {
+      font-size: 28px;
+      fill: #FFF;
+
+      &.center-text{
+        font-size: 64px;
+      }
+    }
+  }
+}
