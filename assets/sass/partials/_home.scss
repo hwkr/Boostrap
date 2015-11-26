@@ -125,10 +125,11 @@ html {
           width: 100%;
           object-fit: cover;
         }
+        h4 {
+          @include ellipses-lines($font-size-h4, $headings-line-height, 2);
+        }
         p {
           margin: 15px auto;
-          font-size: $font-size-base;
-          line-height: $line-height-base;
           @include ellipses-lines($font-size-base, $line-height-base, 4);
         }
       }
