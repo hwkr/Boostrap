@@ -4,8 +4,10 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 
 <main class="content" role="main">
-    {{! Everything inside the #post tags pulls data from the post }}
-    {{#post}}
-        {{content}}
-    {{/post}}
+    <div class="container">
+        {{! Everything inside the #post tags pulls data from the post }}
+        {{#post}}
+            {{content}}
+        {{/post}}
+    </div>
 </main>
