@@ -11,6 +11,10 @@
   color: $brand-primary;
 }
 
+
+// Height-Control
+// -------------------------
+
 @mixin ellipses-lines($font-size, $line-height, $lines-to-show){
   display: block; /* Fallback for non-webkit */
   display: -webkit-box;

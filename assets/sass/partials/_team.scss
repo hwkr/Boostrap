@@ -1,0 +1,49 @@
+//
+// Team Page
+// --------------------------------------------------
+
+.page-team {
+  .wide-member {
+
+    .picture {
+      @extend .col-lg-4;
+      @extend .col-sm-8;
+      @extend .col-sm-offset-2;
+      @extend .col-lg-offset-0;
+
+      img {
+        @extend .img-responsive;
+        @extend .img-circle;
+      }
+    }
+
+    .description {
+      @extend .col-lg-8;
+    }
+  }
+
+  .member {
+    @extend .col-lg-4;
+    @extend .col-sm-6;
+
+    img {
+      @extend .img-responsive;
+      @extend .img-circle;
+
+      padding: 15px;
+    }
+
+    h4 {
+
+    }
+
+    p {
+      @include ellipses-lines($font-size-base, $line-height-base, 5);
+    }
+
+    ul {
+      @extend .list-inline;
+      @extend .text-center;
+    }
+  }
+}
