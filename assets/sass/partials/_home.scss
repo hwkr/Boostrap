@@ -89,7 +89,9 @@ html {
       background: $brand-primary;
 
       blockquote {
-        margin: 0 40px;
+        @media (min-width: $screen-sm-min) {
+          margin: 0 40px;
+        }
         border: none;
         color: #FFF;
         font-family: $font-family-sans-serif;
