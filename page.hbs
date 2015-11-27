@@ -3,11 +3,12 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<main class="content" role="main">
-    <article class="{{post_class}}">
+
+<main class="content {{post_class}}" role="main">
+    <div class="container">
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
             {{content}}
         {{/post}}
-    </article>
+    </div>
 </main>
