@@ -14,13 +14,41 @@
 
 /* Full Post */
 
+.post-header {
+  margin-top: -$navbar-margin-bottom;
+  background-position: center;
+  background-size: cover;
+
+  .darken {
+    background: transparentize(#000, 0.4);
+
+    h1 {
+      color: #fff;
+      margin-top: $line-height-computed/4;
+      margin-bottom: $line-height-computed/2;
+
+      small {
+        color: #fff;
+      }
+    }
+    .page-header {
+      margin-top: $line-height-computed*8;
+      margin-bottom: $line-height-computed*4;
+
+      // Mobile
+      @media (max-width: $screen-xs-max) {
+        margin-top: $line-height-computed*4;
+        margin-bottom: $line-height-computed*2;
+      }
+    }
+  }
+}
+
 .post-full {
 
   .post-meta {
-    margin-bottom: 2em;
-    img {
-      margin-bottom: 1em;
-    }
+    margin-top: $line-height-computed/4;
+    margin-bottom: $line-height-computed/2;
   }
 
   .post-content {
