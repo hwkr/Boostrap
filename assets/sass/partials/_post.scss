@@ -59,11 +59,25 @@
   }
 
   .post-footer {
+
+    margin-bottom: $line-height-computed;
+
+    section {
+      p {
+        @extend .text-muted;
+        font-size: $font-size-small;
+      }
+    }
+
     .author {
-      margin-bottom: 2em;
+      img {
+        float: left;
+        height: 72px;
+        margin-right: $line-height-computed/4;
+      }
     }
     .share {
-      margin-bottom: 2em;
+
     }
   }
 }
