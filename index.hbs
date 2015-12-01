@@ -7,27 +7,28 @@
 
 {{! The main content area on the homepage }}
 <main class="content" role="main">
-  <div class="container">
+    <div class="container">
 
-    <div class="row">
-      {{^is "home"}}
-        <div class="col-lg-12">
-          <h1>
-            Blog
-            <small>
-              {{#is "paged"}}Page {{pagination.page}}{{/is}}
-              {{#is "tag"}}Tagged as <b>{{tag.name}}</b>{{/is}}
-            </small>
-          </h1>
+        <div class="row">
+            {{^is "home"}}
+                <div class="col-lg-8">
+                    <h1>
+                        Blog
+                        <small>
+                            {{#is "author"}}By <b>{{author.name}}</b>{{#is "paged"}} / {{/is}}{{/is}}
+                            {{#is "tag"}}Tagged as <b>{{tag.name}}</b>{{#is "paged"}} / {{/is}}{{/is}}
+                            {{#is "paged"}}Page {{pagination.page}}{{/is}}
+                        </small>
+                    </h1>
 
+                </div>
+            {{/is}}
+            <div class="col-lg-8">
+
+                {{! The tag below includes the post loop - partials/loop.hbs }}
+                {{> "loop"}}
+
+            </div>
         </div>
-      {{/is}}
-      <div class="col-lg-8">
-
-      {{! The tag below includes the post loop - partials/loop.hbs }}
-        {{> "loop"}}
-
-      </div>
     </div>
-  </div>
 </main>
