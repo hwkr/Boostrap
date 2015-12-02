@@ -23,14 +23,15 @@
   }
 
   .member {
-    @extend .col-lg-4;
     @extend .col-sm-6;
 
     img {
       @extend .img-responsive;
       @extend .img-circle;
 
-      padding: 15px;
+      float: left;
+      height: 72px;
+      margin-right: $line-height-computed/4;
     }
 
     h4 {
@@ -38,7 +39,9 @@
     }
 
     p {
-      @include ellipses-lines($font-size-base, $line-height-base, 5);
+      @media (min-width: $screen-sm-min) {
+        @include ellipses-lines($font-size-base, $line-height-base, 3);
+      }
     }
 
     ul {
