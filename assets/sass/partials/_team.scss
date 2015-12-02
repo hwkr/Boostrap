@@ -3,51 +3,48 @@
 // --------------------------------------------------
 
 .page-team {
-  .wide-member {
 
-    .picture {
-      @extend .col-lg-4;
-      @extend .col-sm-8;
-      @extend .col-sm-offset-2;
-      @extend .col-lg-offset-0;
+  .member {
+
+    &.member-default{
+      @extend .col-md-6;
 
       img {
-        @extend .img-responsive;
-        @extend .img-circle;
+        height: 56px;
+        @media (min-width: $screen-sm-min) {
+          height: 72px;
+        }
+      }
+
+      h4 {
+
+      }
+
+      p {
+        @media (min-width: $screen-sm-min) {
+          @include ellipses-lines($font-size-base, $line-height-base, 3);
+        }
       }
     }
 
-    .description {
-      @extend .col-lg-8;
-    }
-  }
+    &.member-jumbo {
+      @extend .col-md-12;
 
-  .member {
-    @extend .col-md-6;
+      img {
+        height: 108px;
+      }
+    }
+
 
     img {
       @extend .img-responsive;
       @extend .img-circle;
 
       float: left;
-      height: 56px;
-
       margin-right: $line-height-computed/4;
-
-      @media (min-width: $screen-sm-min) {
-        height: 72px;
-      }
     }
 
-    h4 {
 
-    }
-
-    p {
-      @media (min-width: $screen-sm-min) {
-        @include ellipses-lines($font-size-base, $line-height-base, 3);
-      }
-    }
 
     ul {
       @extend .list-inline;
