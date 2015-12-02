@@ -36,72 +36,7 @@
   <div class="popover-content">All content copyright © 2015 • All rights reserved.</div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <section class="logo">
-                    <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
-                </section>
-            </div>
-            <div class="col-md-2 col-sm-3 col-xs-4">
-                <section class="work">
-                    <h6>Research</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="/projects/">Projects</a></li>
-                        <li><a href="/publications/">Publications</a></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-8">
-                <section class="about">
-                    <h6>About</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="/team/">Team</a></li>
-                        <li><a href="/alumni/">Alumni</a></li>
-                        <li><a href="/join/">Join</a></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="col-md-2 col-sm-3 col-xs-4">
-                <section class="subscribe">
-                    <h6>Subscribe</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="http://tinyletter.com/thechiselgroup">Email</a></li>
-                        <li><a href="/rss/">RSS</a></li>
-                    </ul>
-                </section>
-            </div>
-            <div class="col-md-3 col-sm-4 col-xs-8">
-                <section class="social">
-                    <h6>Contact</h6>
-                    <address>
-                        <strong>The CHISEL Group</strong><br>
-                        ECS 542, 3800 Finnerty Rd<br/>
-                        Victoria, BC V8P 5C2<br>
-                        <abbr title="Phone">P:</abbr> +1 (250) 472-5775
-                    </address>
-                    <ul class="list-inline">
-                        <li><a href="mailto:chiselgroup@gmail.com" target="_blank"><i class="fa fa-envelope fa-fw"></i></a></li>
-                        <li><a href="https://twitter.com/thechiselgroup/" target="_blank"><i class="fa fa-twitter fa-fw"></i></a></li>
-                        <li><a href="http://www.facebook.com/thechiselgroup/" target="_blank"><i class="fa fa-facebook fa-fw"></i></a></li>
-                        <li><a href="http://github.com/thechiselgroup" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
-                    </ul>
-                </section>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <section class="copyright text-center text-muted">
-                    <small>
-                        All content copyright <a href="/">{{@blog.title}}</a> <i class="fa fa-copyright"></i>
-                        2015 &bull; All rights reserved.
-                    </small>
-                </section>
-            </div>
-        </div>
-    </div>
-</footer>
+{{>footer}}
 
 {{! Ghost outputs important scripts and data with this tag }}
 {{ghost_foot}}
