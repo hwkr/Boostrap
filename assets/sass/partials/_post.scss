@@ -1,6 +1,41 @@
 
 .post-preview {
 
+  .post-link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .post-header {
+    background-position: center;
+    background-size: cover;
+    border-radius: $border-radius-base;
+
+    .darken {
+      background: transparentize(#000, 0.4);
+      border-radius: $border-radius-base;
+      color: #FFF;
+
+      &:hover {
+        background: transparentize(#000, 0.3);
+      }
+
+      .featured {
+        float: right;
+        margin-right: $line-height-computed;
+        margin-top: $line-height-computed;
+      }
+
+      h2 {
+        padding-top: $line-height-computed*8;
+        padding-bottom: $line-height-computed;
+        padding-left: $line-height-computed;
+        padding-right: $line-height-computed;
+      }
+    }
+  }
+
   .post-meta {
     img {
       margin: 1em 0;

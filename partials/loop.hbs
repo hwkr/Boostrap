@@ -1,32 +1,32 @@
 {{! Each post will be output using this markup }}
 {{#foreach posts}}
-  <div class="row">
-    <div class="col-lg-12">
-      <article class="{{post_class}} post-preview">
-        <header class="post-header">
-          <h2 class="post-title">
-            <a href="{{url}}">{{{title}}}</a>
-            {{#if featured}}
-              <span class="label label-primary">Featured</span>
-            {{/if}}
-          </h2>
-
-          <div class="post-meta">
-            {{#if image}}
-              <img class="img-responsive img-rounded text-center" src="{{image}}" alt="{{{title}}} Banner Image"/>
-            {{/if}}
-            <div class="text-muted">
-              <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-              {{#if tags}} on {{tags}}{{/if}}
-            </div>
-          </div>
-        </header>
-        <section class="post-excerpt">
-          <p>{{excerpt}}&hellip;</p>
-        </section>
-      </article>
+    <div class="row">
+        <div class="col-lg-12">
+            <article class="{{post_class}} post-preview">
+                <a class="post-link" href="{{url}}">
+                    <header class="post-header" {{#if image}}style="background-image: url('{{image}}')"{{/if}}>
+                        <div {{#if image}}class="darken"{{/if}}>
+                            {{#if featured}}
+                                <span class="featured label label-default">Featured</span>
+                            {{/if}}
+                            <h2 class="post-title">
+                                {{{title}}}
+                            </h2>
+                        </div>
+                    </header>
+                </a>
+                <section class="post-meta">
+                    <div class="text-muted">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                        {{#if tags}} on {{tags}}{{/if}}
+                    </div>
+                </section>
+                <section class="post-excerpt">
+                    <p>{{excerpt}}&hellip;</p>
+                </section>
+            </article>
+        </div>
     </div>
-  </div>
 {{/foreach}}
 
 {{!! After all the posts, we have the previous/next pagination links }}
