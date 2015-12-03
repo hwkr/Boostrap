@@ -1,17 +1,22 @@
 {{! Each post will be output using this markup }}
 {{#foreach posts}}
-    <div class="row">
+    <div class="row post-row">
         <div class="col-lg-12">
             <article class="{{post_class}} post-preview">
                 <a class="post-link" href="{{url}}">
                     <header class="post-header" {{#if image}}style="background-image: url('{{image}}')"{{/if}}>
                         <div {{#if image}}class="darken"{{/if}}>
                             {{#if featured}}
-                                <span class="featured label label-default">Featured</span>
+                                <i class="featured fa fa-star fa-2x"></i>
                             {{/if}}
-                            <h2 class="post-title">
-                                {{{title}}}
-                            </h2>
+                            <div class="post-title-block">
+                                <h2 class="post-title">
+                                    {{{title}}}
+                                </h2>
+                                <h4 class="post-author">
+                                    {{author.name}}
+                                </h4>
+                            </div>
                         </div>
                     </header>
                 </a>

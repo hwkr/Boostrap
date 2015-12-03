@@ -1,3 +1,19 @@
+//
+// Posts
+// --------------------------------------------------
+
+
+//== Preview Post
+//
+//## In loop.hbs used on the index page
+
+.post-row {
+  margin-bottom: $line-height-computed;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
 
 .post-preview {
 
@@ -10,9 +26,24 @@
     }
   }
 
+  .post-title {
+    margin-top: $line-height-computed/4;
+    margin-bottom: $line-height-computed/4;
+  }
+  .post-author {
+    font-weight: normal;
+    margin-top: $line-height-computed/4;
+    margin-bottom: $line-height-computed/4;
+  }
+
+  .featured {
+    float: right;
+  }
+
   .post-header {
     background-position: center;
     background-size: cover;
+    margin: 0;
     border-radius: $border-radius-base;
 
     .darken {
@@ -30,11 +61,16 @@
         margin-top: $line-height-computed;
       }
 
-      h2 {
+      .post-title-block {
         padding-top: $line-height-computed*8;
         padding-bottom: $line-height-computed;
         padding-left: $line-height-computed;
         padding-right: $line-height-computed;
+
+        // Mobile
+        @media (max-width: $screen-xs-max) {
+          padding-top: $line-height-computed*4;
+        }
       }
     }
   }
@@ -50,27 +86,37 @@
   }
 }
 
-/* Full Post */
+
+//== Full Post
+//
+//## Used on Post.hbs
 
 .post-header {
   margin-top: -$navbar-margin-bottom;
   background-position: center;
   background-size: cover;
 
+
+  .page-header {
+    margin-top: $line-height-computed*4;
+    margin-bottom: 0;
+  }
+
+  .post-title {
+    margin-top: $line-height-computed/4;
+    margin-bottom: $line-height-computed/4;
+
+  }
+  .post-author {
+    font-weight: normal;
+    margin-top: $line-height-computed/4;
+    margin-bottom: $line-height-computed/2;
+  }
+
   .darken {
     background: transparentize(#000, 0.4);
     color: #FFF;
 
-    h1 {
-      margin-top: $line-height-computed/4;
-      margin-bottom: $line-height-computed/4;
-
-    }
-    h3 {
-      font-weight: normal;
-      margin-top: $line-height-computed/4;
-      margin-bottom: $line-height-computed/2;
-    }
     .page-header {
       margin-top: $line-height-computed*8;
       margin-bottom: $line-height-computed*4;
