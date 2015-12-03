@@ -59,15 +59,17 @@
 
   .darken {
     background: transparentize(#000, 0.4);
+    color: #FFF;
 
     h1 {
-      color: #fff;
+      margin-top: $line-height-computed/4;
+      margin-bottom: $line-height-computed/4;
+
+    }
+    h3 {
+      font-weight: normal;
       margin-top: $line-height-computed/4;
       margin-bottom: $line-height-computed/2;
-
-      small {
-        color: #fff;
-      }
     }
     .page-header {
       margin-top: $line-height-computed*8;
