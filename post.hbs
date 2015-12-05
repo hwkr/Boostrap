@@ -37,10 +37,6 @@
 
                         <section class="post-content">
                             <!-- Pocket and Readability metadata -->
-                            <div class="author byline hidden">
-                                <!-- Author for Pocket and Readability -->
-                                <span class="fn name">{{{author.name}}}</span>
-                            </div>
                             {{#if image}}
                                 <div class="hidden entry-image post-image">
                                     <!-- Post Image for Pocket and Readability-->
@@ -59,8 +55,8 @@
                                             <div class="row">
                                                 <div class="col-xs-12">
                                                     <img class="img-circle" src="{{image}}" alt="{{name}}"/>
-                                                    <h4>
-                                                        <a href="{{url}}">{{name}}</a>
+                                                    <h4 class="byline author vcard">
+                                                        <a class="fn" rel="author" href="{{url}}">{{name}}</a>
                                                         <br/>
                                                         <small>{{location}}</small>
                                                     </h4>
