@@ -33,17 +33,18 @@
                                 <time class="published" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time>
                                 {{#if tags}} on {{tags}}{{/if}}
                             </div>
+                        </div>
+
+                        <section class="post-content">
+                            <!-- Pocket and Readability metadata -->
                             <div class="author byline hidden">
                                 <!-- Author for Pocket and Readability -->
                                 <span class="fn name">{{{author.name}}}</span>
                             </div>
-                        </div>
-
-                        <section class="post-content">
                             {{#if image}}
                                 <div class="hidden entry-image post-image">
                                     <!-- Post Image for Pocket and Readability-->
-                                    <img src="{{image}}" alt="{{{title}}} Header Image"/>
+                                    <img class="image-rounded" src="{{image}}" alt="{{{title}}} Header Image"/>
                                 </div>
                             {{/if}}
                             {{content}}
