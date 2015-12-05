@@ -9,11 +9,11 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="page-header">
-                            <h1 class="post-title">
+                            <h1 class="post-title entry-title">
                                 {{{title}}}
                             </h1>
 
-                            <h3 class="post-author">
+                            <h3 class="post-author byline author">
                                 {{{author.name}}}
                             </h3>
                         </div>
@@ -30,9 +30,15 @@
 
                         <div class="post-meta">
                             <div class="text-muted">
-                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time>
+                                <time class="published" datetime="{{date format="YYYY-MM-DD"}}">{{date published_at timeago="true"}}</time>
                                 {{#if tags}} on {{tags}}{{/if}}
                             </div>
+                            {{#if image}}
+                            <div class="hidden entry-image post-image">
+                                <!-- Post Image for Pocket and Readability-->
+                                <img src="{{image}}" alt="{{{title}}} Header Image"/>
+                            </div>
+                            {{/if}}
                         </div>
 
                         <section class="post-content">
