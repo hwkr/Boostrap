@@ -1,8 +1,17 @@
 <div id="publications">
-    <input class="search form-control" type="text" placeholder="Filter" />
-    <button class="sort" data-sort="pub-title">
-        Sort by title
-    </button>
+
+    <div class="input-group filter-box">
+        <span class="input-group-addon" id="search-addon"><i class="fa fa-search"></i></span>
+        <input class="search form-control" type="text" placeholder="Filter"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-order="desc" id="sort-title">
+                <i class="fa fa-sort-alpha-desc"></i>
+            </button>
+            <button class="btn btn-default" type="button" data-order="desc" id="sort-date">
+                <i class="fa fa-sort-numeric-desc"></i>
+            </button>
+        </span>
+    </div>
     <ul class="list list-unstyled">{{#each publications}}
         <li>
             <div class="panel panel-default">
@@ -35,5 +44,10 @@
     var options = {
         valueNames: ['pub-title', 'pub-desc', 'pub-date']
     };
+
     var pubsList = new List('publications', options);
+
+    $("#sort-title").click(function(){
+        console.log(this.dataset.order);
+    })
 </script>
