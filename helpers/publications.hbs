@@ -21,7 +21,7 @@
                     </h3>
                 </div>
                 <div class="panel-body pub-desc">
-                        {{{description}}}
+                    {{#if description}}{{{description}}}{{else}}{{#each authors}}{{first}} {{last}}, {{/each}}<br/>{{#with venue}}{{#if format}}{{{format}}} at the {{/if}}{{{conference}}}{{#if abbrv}} ({{{abbrv}}}){{/if}}{{/with}}{{/if}}
                 </div>
                 <div class="panel-footer">
                     <div class="row">
@@ -47,7 +47,12 @@
 
     var pubsList = new List('publications', options);
 
-    $("#sort-title").click(function(){
-        console.log(this.dataset.order);
+    $("#sort-title").click(function () {
+        if (this.dataset.order == "desc")
+        {
+            pubsList.sort('pub-title', { order: "desc" });
+            this.text = "<i class=\"fa fa-sort-alpha-asc\"></i>";
+            this.dataset.order == "asc"
+        }
     })
 </script>
