@@ -9,10 +9,12 @@
 <main class="content" role="main">
     <div class="container">
         <div class="row">
-            {{! Everything inside the #post tags pulls data from the post }}
-            {{#post}}
-                {{content}}
-            {{/post}}
+            <div class="col-lg-12">
+                {{! Everything inside the #post tags pulls data from the post }}
+                {{#post}}
+                    {{content}}
+                {{/post}}
+            </div>
         </div>
     </div>
 </main>
