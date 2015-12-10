@@ -1,7 +1,7 @@
 <div id="publications">
 
     <div class="input-group filter-box">
-        <span class="input-group-addon" id="search-addon"><i class="fa fa-search"></i></span>
+        <span class="input-group-addon" id="search-addon"><i class="fa fa-filter"></i></span>
         <input class="search form-control" type="text" placeholder="Filter"/>
         <span class="input-group-btn">
             <button class="btn btn-default" type="button" data-order="desc" id="sort-title">
@@ -40,19 +40,4 @@
     </ul>
 </div>
 
-<script>
-    var options = {
-        valueNames: ['pub-title', 'pub-desc', 'pub-date']
-    };
-
-    var pubsList = new List('publications', options);
-
-    $("#sort-title").click(function () {
-        if (this.dataset.order == "desc")
-        {
-            pubsList.sort('pub-title', { order: "desc" });
-            this.text = "<i class=\"fa fa-sort-alpha-asc\"></i>";
-            this.dataset.order == "asc"
-        }
-    })
-</script>
+<script type="text/javascript" src="/assets/js/publications.js"></script>
