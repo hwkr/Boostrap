@@ -109,3 +109,5 @@ node_modules
 
 assets/css/slate*.css
 assets/css/*.min.css
+
+helpers/*json
