@@ -10,4 +10,24 @@
   .filter-box {
     margin-bottom: $line-height-computed*2;
   }
+
+  .filter-error-box {
+    padding: $line-height-computed*4 $line-height-computed*2;
+
+    @media (max-width: $screen-sm-max) {
+      text-align: center;
+      padding: $line-height-computed*2;
+    }
+
+    .icon {
+      @media (min-width: $screen-md-min) {
+        float: right;
+      }
+      font-size: 160px;
+    }
+
+    #current-filter {
+      font-weight: bold;
+    }
+  }
 }
