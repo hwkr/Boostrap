@@ -1,43 +1,26 @@
-<div id="publications">
-
-    <div class="input-group filter-box">
-        <span class="input-group-addon" id="search-addon"><i class="fa fa-filter"></i></span>
-        <input class="search form-control" type="text" placeholder="Filter"/>
-        <span class="input-group-btn">
-            <button class="btn btn-default" type="button" data-order="desc" id="sort-title">
-                <i class="fa fa-sort-alpha-desc"></i>
-            </button>
-            <button class="btn btn-default" type="button" data-order="desc" id="sort-date">
-                <i class="fa fa-sort-numeric-desc"></i>
-            </button>
-        </span>
-    </div>
-    <ul class="list list-unstyled">{{#each publications}}
-        <li>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title pub-title">
-                        {{{title}}}
-                    </h3>
-                </div>
-                <div class="panel-body pub-desc">
-                    {{#if description}}{{{description}}}{{else}}{{#each authors}}{{first}} {{last}}, {{/each}}<br/>{{#with venue}}{{#if format}}{{{format}}} at the {{/if}}{{{conference}}}{{#if abbrv}} ({{{abbrv}}}){{/if}}{{/with}}{{/if}}
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-4 col-sm-push-8 text-right">
-                            <span class="text-muted pub-date">{{year}}</span>
-                        </div>
-                        <div class="col-sm-8  col-sm-pull-4">
-                            <ul class="list-inline">{{#each links}}
-                                <li><a href="{{url}}" class="btn btn-{{#unless @index}}primary{{else}}default{{/unless}} btn-sm"><i class="{{icon}}"></i> {{name}}</a></li>{{/each}}
-                            </ul>
-                        </div>
+<ul class="list list-unstyled">{{#each publications}}
+    <li>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title pub-title">
+                    {{{title}}}
+                </h3>
+            </div>
+            <div class="panel-body pub-desc">
+                {{#if description}}{{{description}}}{{else}}{{#each authors}}{{first}} {{last}}, {{/each}}<br/>{{#with venue}}{{#if format}}{{{format}}} at the {{/if}}{{{conference}}}{{#if abbrv}} ({{{abbrv}}}){{/if}}{{/with}}{{/if}}
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-push-8 text-right">
+                        <span class="text-muted pub-date">{{year}}</span>
+                    </div>
+                    <div class="col-sm-8  col-sm-pull-4">
+                        <ul class="list-inline">{{#each links}}
+                            <li><a href="{{url}}" class="btn btn-{{#unless @index}}primary{{else}}default{{/unless}} btn-sm"><i class="{{icon}}"></i> {{name}}</a></li>{{/each}}
+                        </ul>
                     </div>
                 </div>
             </div>
-        </li>{{/each}}
-    </ul>
-</div>
-
-<script type="text/javascript" src="/assets/js/publications.js"></script>
+        </div>
+    </li>{{/each}}
+</ul>

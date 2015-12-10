@@ -3,18 +3,31 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-
-
-
 <main class="content" role="main">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                {{! Everything inside the #post tags pulls data from the post }}
-                {{#post}}
-                    {{content}}
-                {{/post}}
+                <div id="publications">
+                    <div class="input-group filter-box">
+                        <input class="search form-control" type="text" placeholder="Filter by Title, Author, Conference or Year"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" data-order="desc" id="sort-title">
+                                <i class="fa fa-sort-alpha-desc"></i>
+                            </button>
+                            <button class="btn btn-default" type="button" data-order="desc" id="sort-date">
+                                <i class="fa fa-sort-numeric-desc"></i>
+                            </button>
+                        </span>
+                    </div>
+                    {{! Everything inside the #post tags pulls data from the post }}
+                    {{#post}}
+                        {{content}}
+                    {{/post}}
+                </div>
             </div>
         </div>
     </div>
 </main>
+
+{{! Scripts for Publications Page }}
+<script type="text/javascript" src="/assets/js/publications.js"></script>
