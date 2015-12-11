@@ -19,10 +19,11 @@
             console.log("Background Checker Failed to Initialize: " + err);
         }
 
-        // Popover & Tooltip
+        // Popover, Tooltip and Dropdowns
         $(function () {
             $('[data-toggle="popover"]').popover();
             $('[data-toggle="tooltip"]').tooltip();
+            $('.dropdown-toggle').dropdown();
         })
 
 
