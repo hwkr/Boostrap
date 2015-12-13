@@ -1,0 +1,63 @@
+
+<!--suppress CssUnknownTarget -->
+<style>
+    .tile {
+        background-image: url('/content/images/2015/12/tile-transparent.svg');
+    }
+    .tile.tile-dark{
+        background-color: #999;
+    }
+    .tile.tile-light{
+        background-color: #FFF;
+    }
+</style>
+<div class="row">{{#each logos}}
+    <div class="col-md-4">
+        <div class="thumbnail">
+            <img src="{{../url}}{{preview_token}}" class="img-rounded img-responsive{{#if tile}} {{tile}}{{/if}}" style="width: 100%">
+            <div class="caption">
+                <div class="btn-group btn-group-sm btn-group-justified" role="group">
+                    <a role="button" class="btn btn-default {{#if allow_greyscale}}toggle-greyscale{{else}}disabled{{/if}}"><i class="fa fa-adjust"></i> Greyscale</a>
+                    <a role="button" class="btn btn-default {{#if allow_background}}toggle-background{{else}}disabled{{/if}}"><i class="fa fa-th"></i> Background</a>
+                </div>
+                <h3>{{{title}}}</h3>
+                <p>{{{description}}}</p>{{#each styles}}
+                <div class="download-{{token}}">
+                    <h5>Download {{{description}}}</h5>{{#each downloads}}
+                    <div class="btn-group dropup">
+                        <a role="button" class="btn btn-{{#if @index}}default{{else}}primary{{/if}}"><i class="{{icon}}"></i> {{{title}}}</a>
+                        <a role="button" class="btn btn-{{#if @index}}default{{else}}primary{{/if}} dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </a>
+                        <ul class="dropdown-menu">{{#each forms}}
+                            <li><a href="{{../../../../url}}{{../directory}}chisel_logo_{{../../../token}}_{{../../token}}_{{token}}.{{../extension}}" download>{{title}}</a></li>{{/each}}{{#each sizes}}
+                            <li><h6 class="text-center">{{{title}}}</h6></li>{{#each forms}}
+                            <li><a href="{{../../../../../url}}{{../../directory}}{{../directory}}chisel_logo_{{../../../../token}}_{{../../../token}}_{{token}}.{{../../extension}}" download>{{title}}</a></li>{{/each}}{{/each}}
+                    </ul>
+                    </div>{{/each}}
+                </div>{{/each}}
+            </div>
+        </div>
+    </div>{{/each}}
+</div>
+<script>
+    var toggleGrey = $(".toggle-greyscale");
+    var toggleBg = $(".toggle-background");
+
+    toggleGrey.click(function() {
+        var image = $(this).closest(".thumbnail").children("img");
+        var src = image.attr("src");
+        if (src.indexOf("color") != -1) {
+            image.attr("src", src.replace("color", "grey"));
+        } else {
+            image.attr("src", src.replace("grey", "color"));
+        }
+    });
+
+    toggleBg.click(function() {
+        var image = $(this).closest(".thumbnail").children("img");
+        image.toggleClass("tile");
+    });
+</script>
