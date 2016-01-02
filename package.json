@@ -1,12 +1,12 @@
 {
-  "name": "Slate",
+  "name": "Boostrap",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/thechiselgroup/slate.git"
+    "url": "git://github.com/bitHero/boostrap.git"
   },
-  "bugs": "https://github.com/thechiselgroup/slate/issues",
-  "contributors": "https://github.com/thechiselgroup/slate/graphs/contributors",
+  "bugs": "https://github.com/bitHero/boostrap/issues",
+  "contributors": "https://github.com/bitHero/boostrap/graphs/contributors",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",
