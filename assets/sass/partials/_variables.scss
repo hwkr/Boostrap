@@ -27,20 +27,26 @@ $brand-primary: #1A8EBD;
 //
 //## For the homepage
 
-$navbar-home-color:                     #FFF;
-$navbar-home-bg:                        transparent;
-$navbar-home-border:                    transparent;
+$navbar-home-color:             #FFF;
+$navbar-home-bg:                darken($brand-primary, 1%);
+$navbar-home-border:            darken($brand-primary, 2%);
 
 // Navbar links
-$navbar-home-link-color:                $gray;
+$navbar-home-link-color:                darken($brand-primary, 20%);
+$navbar-home-link-hover-color:          darken($brand-primary, 30%);
 $navbar-home-link-hover-bg:             transparent;
-$navbar-home-link-active-color:         #ccc;
+$navbar-home-link-active-color:         $navbar-home-link-hover-color;
 $navbar-home-link-active-bg:            transparent;
-$navbar-home-link-disabled-color:       #777;
+$navbar-home-link-disabled-color:       $gray-lighter;
 $navbar-home-link-disabled-bg:          transparent;
 
+// Navbar brand label
+$navbar-home-brand-color:               $navbar-home-link-hover-color;
+$navbar-home-brand-hover-color:         $navbar-home-link-hover-color;
+$navbar-home-brand-hover-bg:            transparent;
+
 // Navbar toggle
-$navbar-home-toggle-bg:                 transparent;
-$navbar-home-toggle-hover-bg:           transparent;
-$navbar-home-toggle-icon-bar-bg:        $navbar-home-color;
-$navbar-home-toggle-border-color:       transparent;
+$navbar-home-toggle-hover-bg:           darken($brand-primary, 5%);
+$navbar-home-toggle-icon-bar-bg:        darken($brand-primary, 10%);
+$navbar-home-toggle-border-color:       darken($brand-primary, 10%);
+

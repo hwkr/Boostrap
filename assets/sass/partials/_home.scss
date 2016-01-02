@@ -7,31 +7,34 @@ html {
   .home-header {
     width: 100%;
     height: 100vh;
-    background-color: $gray-darker;
+    background-color: $brand-primary;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: $gray-lighter;
+    color: #FFF;
 
-
-    h1, h2 {
-      margin: 10px 0px;
-      font-weight: normal;
+    h1, h2, h3 {
+      margin: 0;
+      font-weight: 600;
+      line-height: 1.0;
+      color: #FFF;
     }
-    h1 {
-      margin-left: -0.08em;
+
+    p {
+      margin-top: $line-height-computed*2;
+      font-size: $font-size-large;
     }
     
     @media (min-width: $screen-sm-min) {
       h1 { font-size: 8vw; }
-      h2 { font-size: 2vw; }
+      h2 { font-size: 4.1vw; }
       img {
         max-width: 50%;
       }
     }
     @media (max-width: $screen-xs-max) {
-      h1 { font-size: 14vw; }
-      h2 { font-size: 4vw; }
+      h1 { font-size: 16vw; }
+      h2 { font-size: 8.3vw; }
       img {
         max-width: 100%;
       }
@@ -43,9 +46,13 @@ html {
 
       .hero {
         height: 100%;
+        width: 100%;
         display: table;
         table-layout: fixed;
+
         div {
+          width: 100%;
+          margin: 0 auto;
           @extend .vertical-center;
         }
       }
