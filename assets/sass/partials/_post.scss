@@ -51,6 +51,11 @@
       border-radius: $border-radius-base;
       color: #FFF;
 
+
+      h1,h2,h3,h4 {
+        color: #FFF;
+      }
+
       &:hover {
         background: transparentize(#000, 0.3);
       }
@@ -105,6 +110,7 @@
   .post-title {
     margin-top: $line-height-computed/4;
     margin-bottom: $line-height-computed/4;
+    font-weight: 700;
 
   }
   .post-author {
@@ -120,6 +126,10 @@
     .page-header {
       margin-top: $line-height-computed*8;
       margin-bottom: $line-height-computed*4;
+
+      h1,h2,h3 {
+        color: #FFF;
+      }
 
       // Mobile
       @media (max-width: $screen-xs-max) {
