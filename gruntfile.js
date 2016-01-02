@@ -7,8 +7,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           style: 'expanded',
-          sourcemap: 'auto',
-          cacheLocation: 'sass/.sass-cache'
+          sourcemap: 'auto'
         },
         files: {
           'assets/css/boostrap.css': 'assets/sass/boostrap.scss'
