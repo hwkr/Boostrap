@@ -3,7 +3,7 @@ html {
 }
 
 .page-home {
-  
+
   .home-header {
     width: 100%;
     height: 100vh;
@@ -24,22 +24,30 @@ html {
       margin-top: $line-height-computed*2;
       font-size: $font-size-large;
     }
-    
+
     @media (min-width: $screen-sm-min) {
-      h1 { font-size: 8vw; }
-      h2 { font-size: 4.1vw; }
+      h1 {
+        font-size: 8vw;
+      }
+      h2 {
+        font-size: 4.1vw;
+      }
       img {
         max-width: 50%;
       }
     }
     @media (max-width: $screen-xs-max) {
-      h1 { font-size: 16vw; }
-      h2 { font-size: 8.3vw; }
+      h1 {
+        font-size: 16vw;
+      }
+      h2 {
+        font-size: 8.3vw;
+      }
       img {
         max-width: 100%;
       }
     }
-    
+
     .container {
       height: 100%;
       position: relative;
@@ -69,78 +77,11 @@ html {
 
       &:hover {
         text-decoration: none;
-        color: $brand-primary;
+        color: darken($brand-primary, 25%);
       }
-    }
-  }
-
-  main {
-    section {
-      .container {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        border-bottom: 1px solid $gray-lighter;
-      }
-
-      &:last-of-type {
-        .container {
-          border-bottom: none;
-        }
-      }
-    }
-
-    #callout {
-      .container {
-        border-bottom: none;
-      }
-      background: $brand-primary;
-
-      blockquote {
-        @media (min-width: $screen-sm-min) {
-          margin: 0 40px;
-        }
-        border: none;
-        color: #FFF;
-        font-family: $font-family-sans-serif;
-
-        @media (min-width: $screen-sm-min) {
-          font-size: ceil(($font-size-large * 1.25));
-        }
-        @media (max-width: $screen-xs-max) {
-          font-size: $font-size-large;
-        }
-
-        footer {
-          color: $gray-lighter;
-          text-align: right;
-        }
-      }
-    }
-
-    #projects {
-      .row.project {
-        padding-bottom: 50px;
-      }
-    }
-
-    #blog {
-      //background: $gray-lighter;
-      .thumbnail {
-
-        img {
-          //@extend .img-rounded;
-
-          height: 240px;
-          width: 100%;
-          object-fit: cover;
-        }
-        h4 {
-          @include ellipses-lines($font-size-h4, $headings-line-height, 2);
-        }
-        p {
-          margin: 15px auto;
-          @include ellipses-lines($font-size-base, $line-height-base, 4);
-        }
+      &:focus {
+        text-decoration: none;
+        color: darken($brand-primary, 25%);
       }
     }
   }
