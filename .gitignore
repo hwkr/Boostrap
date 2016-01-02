@@ -107,7 +107,7 @@ node_modules
 
 # Built Files
 
-assets/css/slate*.css
+assets/css/boostrap*.css
 assets/css/*.min.css
 
 helpers/*json
