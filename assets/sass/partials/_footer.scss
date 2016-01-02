@@ -14,6 +14,8 @@ body {
   font-size: $font-size-small;
 
   .logo {
+    margin-bottom: $line-height-computed;
+
     img {
       max-width: 150px;
       max-height: 90px;
@@ -22,7 +24,9 @@ body {
     }
   }
 
-
+  .made-with {
+    margin-top: $line-height-computed;
+  }
 
   .popover {
     min-width: 279px;
