@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="content" role="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="work">
+                    <input class="search form-control filter-box" type="text" placeholder="Filter projects"/>
+                    {{! Everything inside the #post tags pulls data from the post }}
+                    {{#post}}
+                        {{content}}
+                    {{/post}}
+                </div>
+            </div>
+        </div>
+        <div class="row hidden" id="filter-error">
+            <div class="col-lg-12">
+                <div class="filter-error-box">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h2>Uh oh.</h2>
+                            <p>I couldn't find and projects for <span id="current-filter">???</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{! Scripts for Publications Page }}
+<script type="text/javascript" src="/assets/js/work.js"></script>

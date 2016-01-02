@@ -1,0 +1,68 @@
+//
+// Work Page
+// --------------------------------------------------
+
+.page-work {
+  .work-card {
+    @extend .panel;
+
+    overflow: hidden;
+    margin: $padding-base-vertical 0;
+
+    .card-title, .card-meta {
+      visibility: hidden;
+    }
+
+    .body {
+      @extend .panel-body;
+
+      min-height: 196px;
+
+      &:hover {
+        margin: 0;
+        color: transparentize($gray-lighter, 0.1);
+      }
+    }
+    .actions {
+      @extend .row;
+      @extend .panel-footer;
+
+      a {
+        color: $gray-light;
+
+        &:hover{
+          color: darken($gray-light,20%);
+          text-decoration: none;
+        }
+        &:focus{
+          color: darken($gray-light,30%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .filter-box {
+    margin-bottom: $line-height-computed*2;
+  }
+
+  .filter-error-box {
+    padding: $line-height-computed*4 $line-height-computed*2;
+
+    @media (max-width: $screen-sm-max) {
+      text-align: center;
+      padding: $line-height-computed*2;
+    }
+
+    .icon {
+      @media (min-width: $screen-md-min) {
+        float: right;
+      }
+      font-size: 160px;
+    }
+
+    #current-filter {
+      font-weight: bold;
+    }
+  }
+}
