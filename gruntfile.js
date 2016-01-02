@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           cacheLocation: 'sass/.sass-cache'
         },
         files: {
-          'assets/css/slate.css': 'assets/sass/slate.scss'
+          'assets/css/boostrap.css': 'assets/sass/boostrap.scss'
         },
       }
     },
