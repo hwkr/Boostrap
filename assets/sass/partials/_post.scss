@@ -149,10 +149,14 @@
 
   .post-content {
     margin-bottom: 2em;
-    img {
+
+    &> p > img {
       @extend .img-responsive, .img-rounded;
-      margin-left: auto;
-      margin-right: auto;
+    }
+
+    & >img, >div, >figure, >pre {
+
+      margin: $line-height-computed auto;
     }
   }
 
