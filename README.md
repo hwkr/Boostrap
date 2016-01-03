@@ -4,7 +4,7 @@ A fully responsive, open source, theme for [Ghost](https://ghost.org/) using Boo
 
 ![Preview of Theme](http://www.hawker.me/content/images/2016/01/facelift.png)
 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Build Status](https://travis-ci.org/bitHero/boostrap.svg?branch=master)](https://travis-ci.org/bitHero/boostrap) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Getting Started
 
