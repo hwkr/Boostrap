@@ -12,6 +12,7 @@
     padding: 0;
     width: 100%;
     height: auto;
+    border-radius: 0;
   }
 
   /* =============================================================================
@@ -182,11 +183,13 @@
     $initial-mobile-volume-spacing: 12px;
 
     $mobile-frame-color: #ddd;
+    $mobile-background-color: #ddd;
     $mobile-button-color: #bbb;
     $mobile-volume-color: #bbb;
     $mobile-breakpoint-small: 720px;
 
     width: $initial-mobile-width + $initial-mobile-outline*2;
+    background: $mobile-background-color;
     border-top: solid $initial-mobile-top-bar $mobile-frame-color;
     border-left: solid $initial-mobile-outline $mobile-frame-color;
     border-right: solid $initial-mobile-outline $mobile-frame-color;
@@ -245,6 +248,91 @@
         width: $initial-mobile-button*1.5;
         height: $initial-mobile-button*1.5;
         border-radius: $initial-mobile-button*1.5/2;
+        content: "";
+      }
+    }
+  }
+
+  /* =============================================================================
+    ANDROID
+  ============================================================================= */
+
+  &.css-device--android {
+    // android vars
+    $initial-android-width: 160px;
+    $initial-android-outline: 12px;
+    $initial-android-top-bar: 24px;
+    $initial-android-bottom-bar: 48px;
+    $initial-android-button-width: 2px;
+    $initial-android-power-button: 24px;
+    $initial-android-volume-button: 64px;
+
+    $android-frame-color: #333;
+    $android-background-color: #666;
+    $android-button-color: #666;
+    $android-volume-color: #666;
+    $android-breakpoint-small: 720px;
+
+    width: $initial-android-width + $initial-android-outline*2;
+    background: $android-background-color;
+    border-top: solid $initial-android-top-bar $android-frame-color;
+    border-left: solid $initial-android-outline $android-frame-color;
+    border-right: solid $initial-android-outline $android-frame-color;
+    border-bottom: solid $initial-android-bottom-bar $android-frame-color;
+
+    border-radius: $initial-android-width*2 unquote("/") $initial-android-outline;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: $initial-android-outline*2;
+      left: -$initial-android-outline - $initial-android-button-width;
+      width: $initial-android-button-width;
+      height: $initial-android-volume-button;
+      background-color: $android-button-color;
+      border-radius: $initial-android-button-width 0 0 $initial-android-button-width;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      top: $initial-android-outline*3;
+      right: -$initial-android-outline - $initial-android-button-width;
+      width: $initial-android-button-width;
+      height: $initial-android-power-button;
+      background-color: $android-button-color;
+      border-radius: 0 $initial-android-button-width $initial-android-button-width 0;
+      content: "";
+    }
+
+    @media all and (min-width: $android-breakpoint-small) {
+
+      width: $initial-android-width*1.5 + $initial-android-outline*1.5*2;
+      border-top: solid $initial-android-top-bar*1.5 $android-frame-color;
+      border-left: solid $initial-android-outline*1.5 $android-frame-color;
+      border-right: solid $initial-android-outline*1.5 $android-frame-color;
+      border-bottom: solid $initial-android-bottom-bar*1.5 $android-frame-color;
+
+      border-radius: $initial-android-width*2 unquote("/") $initial-android-outline*1.5;
+
+      &::before {
+        top: $initial-android-outline*4;
+        left: -$initial-android-outline*1.5 - $initial-android-button-width*1.5;
+        width: $initial-android-button-width*1.5;
+        height: $initial-android-volume-button*1.5;
+        background-color: $android-button-color;
+        border-radius: $initial-android-button-width*1.5 0 0 $initial-android-button-width*1.5;
+        content: "";
+      }
+
+      &::after {
+        top: $initial-android-outline*5;
+        right: -$initial-android-outline*1.5 - $initial-android-button-width*1.5;
+        width: $initial-android-button-width*1.5;
+        height: $initial-android-power-button*1.5;
+        background-color: $android-button-color;
+        border-radius: 0 $initial-android-button-width*1.5 $initial-android-button-width*1.5 0;
         content: "";
       }
     }
