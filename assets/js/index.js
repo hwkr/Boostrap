@@ -16,7 +16,7 @@
             });
         }
         catch (err) {
-            console.log("Background Checker Failed to Initialize: " + err);
+            //Don't worry about background checker
         }
 
         // Popover, Tooltip and Dropdowns
