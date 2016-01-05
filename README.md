@@ -28,6 +28,44 @@ npm install
 grunt build
 ```
 
+## Usage
+
+Want to use this theme on your website? Here's a list of things to change,
+
+* The footer in `partials/footer.hbs`
+* Follow me on Twitter `page-home.hbs`
+* Remove the console message in `assets/js/index.js`
+
+The home page requires that a page is created in ghost with the tag _home_. If you want to have this be the root (`/`) of your site you'll need to do a URL rewrite. 
+
+Here's my nginx config if you're using nginx,
+
+```
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    server_name hawker.me; # Replace with your domain
+
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+
+    client_max_body_size 10G;
+
+    location / {
+        rewrite ^/$ /home/ break;
+        rewrite ^/blog/$ / break;
+        rewrite ^/blog/(.+)$ /$1 break;
+        proxy_pass http://localhost:2368;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_buffering off;
+    }
+}
+
+```
+
 ## Origin
 
 Originally forked from a barebones theme (also called Boostrap) by Matt Lambert.
