@@ -9,7 +9,7 @@ A fully responsive, open source, theme for [Ghost](https://ghost.org/) using Boo
 [![David](https://img.shields.io/david/dev/bitHero/boostrap.svg)](https://github.com/bitHero/boostrap/blob/master/package.json)
 [![Ghost Version](https://img.shields.io/badge/ghost-0.7.1-blue.svg)](https://github.com/TryGhost/Ghost/releases/tag/0.7.1)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bitHero/boostrap/blob/master/LICENSE) 
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![Built with Grunt](https://cdn.rawgit.com/bitHero/BitBadges/master/svg/grunt.svg)](http://gruntjs.com/)
 
 ## Getting Started
 
