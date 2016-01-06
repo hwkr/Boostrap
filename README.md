@@ -5,7 +5,7 @@ A fully responsive, open source, theme for [Ghost](https://ghost.org/) using Boo
 ![Preview of Theme](http://www.hawker.me/content/images/2016/01/facelift.png)
 
 
-[![Build Status](https://travis-ci.org/bitHero/boostrap.svg?branch=master)](https://travis-ci.org/bitHero/boostrap)
+[![Build Status](https://travis-ci.org/bitHero/Boostrap.svg?branch=master)](https://travis-ci.org/bitHero/Boostrap)
 [![David](https://img.shields.io/david/dev/bitHero/boostrap.svg)](https://github.com/bitHero/boostrap/blob/master/package.json)
 [![Ghost Version](https://img.shields.io/badge/ghost-0.7.1-blue.svg)](https://github.com/TryGhost/Ghost/releases/tag/0.7.1)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bitHero/boostrap/blob/master/LICENSE) 
