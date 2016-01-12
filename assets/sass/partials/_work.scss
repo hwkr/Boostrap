@@ -9,19 +9,45 @@
     overflow: hidden;
     margin: $padding-base-vertical 0;
 
-    .card-title, .card-meta {
+    .card-meta {
       visibility: hidden;
     }
 
     .body {
       @extend .panel-body;
 
-      min-height: 196px;
+      height: 196px;
+      padding: 0;
+      position: relative;
 
-      &:hover {
-        margin: 0;
-        color: transparentize($gray-lighter, 0.1);
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+
+        opacity: 0;
+        background: $panel-footer-bg;
+        background: transparentize($panel-footer-bg, 0.04);
+        padding: $line-height-computed;
+
+        &:hover {
+          opacity: 1;
+          transition: opacity 250ms ease;
+        }
+
+        strong {
+          font-size: $font-size-large;
+        }
+
+        .card-date {
+          position: absolute;
+          right: $line-height-computed;
+          bottom: $line-height-computed;
+        }
       }
+
     }
     .actions {
       @extend .row;

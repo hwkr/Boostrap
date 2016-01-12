@@ -18,6 +18,20 @@
   text-overflow: ellipsis;
 }
 
+// Link Helper
+// -------------------------
+
+a.link-unstyled {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
 // Auto Color for Background-Check
 // -------------------------
 
