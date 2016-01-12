@@ -3,18 +3,17 @@
     <li class="col-md-{{#if width}}{{width}}{{else}}4{{/if}}">
         <div class="work-card">
             <div class="body" style="background:{{#image}}{{{color}}} url('{{{url}}}') center / {{#if position}}{{position}}{{else}}contain{{/if}} no-repeat{{/image}}">
-              <a class="link-unstyled" href="#">
+              <div class="card-over">
+                <a class="card-link" href="{{links.0.url}}"{{#if links.0.external}} target="_blank"{{/if}}></a>
                 <strong class="card-title">{{name}}</strong>
-
                 <p class="card-description">{{{description}}}</p>
                 <span class="card-date">{{year}}</span>
-              </a>
-
+              </div>
               <p class="card-meta">{{meta}}</p>
             </div>
             <div class="actions">{{#each links}}
                 <div class="col-xs-6">
-                  <a href="{{url}}" target="_blank"><i class="fa fa-{{icon}}"></i> {{name}}</a>
+                  <a href="{{url}}"{{#if external}} target="_blank"{{/if}}><i class="fa fa-{{icon}}"></i> {{name}}</a>
                 </div>{{/each}}
             </div>
         </div>

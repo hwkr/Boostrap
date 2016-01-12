@@ -20,11 +20,9 @@
       padding: 0;
       position: relative;
 
-      a {
+      .card-over {
         width: 100%;
         height: 100%;
-        display: block;
-        box-sizing: border-box;
         position: absolute;
 
         opacity: 0;
@@ -32,6 +30,7 @@
         background: transparentize($panel-footer-bg, 0.04);
         padding: $line-height-computed;
 
+        &:focus,
         &:hover {
           opacity: 1;
           transition: opacity 250ms ease;
@@ -45,6 +44,19 @@
           position: absolute;
           right: $line-height-computed;
           bottom: $line-height-computed;
+        }
+
+        a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          background: transparent;
+          margin: -$line-height-computed;
+
+          @media (max-width: $screen-md-max) {
+            visibility: hidden;
+          }
         }
       }
 
