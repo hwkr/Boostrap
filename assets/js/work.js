@@ -1,5 +1,5 @@
 var options = {
-    valueNames: ['card-title', 'card-meta']
+    valueNames: ['card-title', 'card-description', 'card-date', 'card-meta']
 };
 
 var pubsList = new List('work', options);
