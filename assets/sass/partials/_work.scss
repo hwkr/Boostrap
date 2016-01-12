@@ -28,6 +28,7 @@
         opacity: 0;
         background: $panel-footer-bg;
         background: transparentize($panel-footer-bg, 0.04);
+        background: linear-gradient(to bottom, transparentize($panel-footer-bg, 0.05) 10%, $panel-footer-bg 100%);
         padding: $line-height-computed;
 
         &:focus,
