@@ -55,7 +55,7 @@
           background: transparent;
           margin: -$line-height-computed;
 
-          @media (max-width: $screen-md-max) {
+          @media (max-width: $screen-sm-max) {
             visibility: hidden;
           }
         }
