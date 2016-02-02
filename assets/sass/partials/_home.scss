@@ -85,12 +85,89 @@ html {
       }
     }
   }
+
+  .project {
+    margin: 3*$line-height-computed 0;
+    padding-top: $line-height-computed;
+
+    @media (max-width: $screen-sm-max) {
+      padding-bottom: 8*$line-height-computed;
+    }
+    border-bottom: solid 1px $gray-lighter;
+    overflow: hidden;
+    position: relative;
+
+    .blurb {
+      padding: $line-height-computed 1.5*$line-height-computed;
+    }
+    .jobs {
+      padding: 0 1.5*$line-height-computed 0.5*$line-height-computed 1.5*$line-height-computed;
+      position: relative;
+      top: 0px;
+      opacity: 0.8;
+      transform: translateY(1.5*$line-height-computed);
+      transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      @media (max-width: $screen-sm-max) {
+        visibility: hidden;
+      }
+    }
+    .promo {
+      position: absolute;
+      transform: translateY(0.5*$line-height-computed);
+      transition: transform 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+      width: 100%;
+      &.promo-window {
+        padding: 28px;
+        @media (max-width: $screen-sm-max) {
+          transform: translateY(-3*$line-height-computed);
+        }
+      }
+      &.promo-mobile {
+        padding: 28px;
+        img {
+          margin: 0 auto;
+          max-width: 9.5*$line-height-computed;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          transform: translateY(10*$line-height-computed);
+          img {
+            max-width: 7*$line-height-computed;
+          }
+        }
+      }
+    }
+    &:hover {
+      @media (min-width: $screen-md-min) {
+        .jobs {
+          transform: translateY(0px);
+        }
+        .promo {
+          transform: translateY(-36px);
+        }
+      }
+    }
+  }
+
+  .right-now {
+    margin-top: 5*$line-height-computed;
+    margin-bottom: 2*$line-height-computed;
+    text-align: center;
+    iframe {
+      margin: 1.5*$line-height-computed 0;
+    }
+  }
 }
 
 .vertical-center {
   display:table-cell;
   vertical-align: middle;
   float: none;
+}
+
+.img-shadow {
+  box-shadow: 0 10px 20px 0 rgba(128, 128, 128, 0.5);
 }
 
 
